@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+@theme {
+  --color-primary: #B2260E;
+  --color-primary-foreground: #ffffff;
+  --color-ring: rgba(255, 255, 255, 0.5);
+  --color-destructive: #ef4444;
+}
+
 :root {
   --bg: #0a0a0a;
   --accent: #B2260E;

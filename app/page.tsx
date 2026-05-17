@@ -1,4 +1,7 @@
+"use client"
+
 import Link from "next/link";
+import { LiquidButton } from "@/components/ui/liquid-glass-button";
 
 export default function Home() {
   return (
@@ -100,9 +103,18 @@ export default function Home() {
             className="fade-up fade-up-delay-4"
             style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}
           >
-            <a href="#book" className="btn-glass">
+            <LiquidButton
+              onClick={() => document.getElementById("book")?.scrollIntoView({ behavior: "smooth" })}
+              style={{
+                fontSize: "11px",
+                fontWeight: 500,
+                letterSpacing: "0.18em",
+                textTransform: "uppercase",
+                color: "#ffffff",
+              }}
+            >
               Book Your Session
-            </a>
+            </LiquidButton>
             <Link href="/services" className="btn-glass" style={{ color: "rgba(255,255,255,0.5)" }}>
               View Services
             </Link>
@@ -314,13 +326,18 @@ export default function Home() {
         >
           Book Your Seat.
         </h2>
-        <a
-          href="tel:+15550001234"
-          className="btn-glass"
-          style={{ fontSize: "12px", padding: "18px 48px" }}
+        <LiquidButton
+          onClick={() => { window.location.href = "tel:+15550001234" }}
+          style={{
+            fontSize: "11px",
+            fontWeight: 500,
+            letterSpacing: "0.18em",
+            textTransform: "uppercase",
+            color: "#ffffff",
+          }}
         >
           Call to Book — (555) 000-1234
-        </a>
+        </LiquidButton>
       </section>
     </>
   );
