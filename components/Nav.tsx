@@ -38,14 +38,16 @@ export default function Nav() {
       }}
     >
       {/* Wordmark */}
-      <Link href="/" style={{ textDecoration: "none" }}>
+      <Link href="/" style={{ textDecoration: "none", lineHeight: 1 }}>
         <span
           style={{
-            fontSize: "13px",
-            fontWeight: 700,
-            letterSpacing: "0.3em",
+            fontFamily: "var(--font-bebas), 'Bebas Neue', sans-serif",
+            fontSize: "32px",
+            letterSpacing: "0.08em",
             color: "#ffffff",
             textTransform: "uppercase",
+            lineHeight: 1,
+            display: "block",
           }}
         >
           Dimension

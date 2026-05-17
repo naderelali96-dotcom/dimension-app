@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { DM_Sans, Playfair_Display } from "next/font/google";
+import { DM_Sans, Playfair_Display, Bebas_Neue } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
@@ -19,6 +19,13 @@ const playfair = Playfair_Display({
   display: "swap",
 });
 
+const bebasNeue = Bebas_Neue({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-bebas",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: "Dimension — Barbershop",
   description: "Premium barbershop. Precision cuts, intentional craft.",
@@ -30,7 +37,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${dmSans.variable} ${playfair.variable}`}>
+    <html lang="en" className={`${dmSans.variable} ${playfair.variable} ${bebasNeue.variable}`}>
       <body style={{ fontFamily: "var(--font-dm-sans), sans-serif" }} className="min-h-screen flex flex-col">
         <Nav />
         <main className="flex-1">{children}</main>
