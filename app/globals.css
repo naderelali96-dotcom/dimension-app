@@ -10,6 +10,7 @@
 :root {
   --bg: #0a0a0a;
   --accent: #B2260E;
+  --side: clamp(24px, 5.5vw, 96px);
 }
 
 * {
@@ -30,14 +31,32 @@ body {
   overflow-x: hidden;
 }
 
-/* Liquid glass button */
+/* ── Initial page-load reveal ────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.fade-up { animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.fade-up-delay-1 { animation-delay: 0.1s; opacity: 0; }
+.fade-up-delay-2 { animation-delay: 0.25s; opacity: 0; }
+.fade-up-delay-3 { animation-delay: 0.45s; opacity: 0; }
+.fade-up-delay-4 { animation-delay: 0.65s; opacity: 0; }
+
+/* ── Marquee ─────────────────────────────────────────────── */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* ── Buttons ─────────────────────────────────────────────── */
 .btn-glass {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 16px 40px;
+  padding: 14px 36px;
   background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   color: #ffffff;
   font-size: 11px;
   font-weight: 500;
@@ -52,17 +71,17 @@ body {
 }
 
 .btn-glass:hover {
-  background: rgba(178, 38, 14, 0.12);
-  border-color: rgba(178, 38, 14, 0.5);
+  background: rgba(178, 38, 14, 0.1);
+  border-color: rgba(178, 38, 14, 0.45);
 }
 
 .btn-glass-accent {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 14px 32px;
+  padding: 11px 28px;
   background: rgba(178, 38, 14, 0.08);
-  border: 1px solid rgba(178, 38, 14, 0.35);
+  border: 1px solid rgba(178, 38, 14, 0.3);
   color: #ffffff;
   font-size: 11px;
   font-weight: 500;
@@ -76,49 +95,17 @@ body {
 }
 
 .btn-glass-accent:hover {
-  background: rgba(178, 38, 14, 0.22);
-  border-color: rgba(178, 38, 14, 0.7);
+  background: rgba(178, 38, 14, 0.2);
+  border-color: rgba(178, 38, 14, 0.6);
 }
 
-/* Fade-in animation */
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(32px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.fade-up {
-  animation: fadeUp 0.9s ease forwards;
-}
-
-.fade-up-delay-1 { animation-delay: 0.15s; opacity: 0; }
-.fade-up-delay-2 { animation-delay: 0.3s; opacity: 0; }
-.fade-up-delay-3 { animation-delay: 0.45s; opacity: 0; }
-.fade-up-delay-4 { animation-delay: 0.6s; opacity: 0; }
-
-/* Custom scrollbar */
-::-webkit-scrollbar { width: 3px; }
-::-webkit-scrollbar-track { background: #0a0a0a; }
-::-webkit-scrollbar-thumb { background: #222; }
-::-webkit-scrollbar-thumb:hover { background: #B2260E; }
-
-::selection {
-  background: rgba(178, 38, 14, 0.28);
-  color: #ffffff;
-}
-
-/* Nav link */
+/* ── Navigation ──────────────────────────────────────────── */
 .nav-link {
   font-size: 11px;
   font-weight: 400;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.45);
   text-decoration: none;
   transition: color 0.25s ease;
 }
@@ -128,23 +115,34 @@ body {
   color: #ffffff;
 }
 
-/* Service card */
+/* ── Decorative elements ─────────────────────────────────── */
+.line-accent {
+  width: 28px;
+  height: 1px;
+  background-color: #B2260E;
+  display: block;
+  flex-shrink: 0;
+}
+
+/* ── Cards ───────────────────────────────────────────────── */
 .service-card {
   border: 1px solid rgba(255, 255, 255, 0.07);
   background: rgba(255, 255, 255, 0.02);
   transition: border-color 0.3s ease, background 0.3s ease;
-  cursor: default;
 }
 
 .service-card:hover {
-  border-color: rgba(178, 38, 14, 0.35);
-  background: rgba(178, 38, 14, 0.03);
+  border-color: rgba(178, 38, 14, 0.3);
+  background: rgba(178, 38, 14, 0.025);
 }
 
-/* Thin line */
-.line-accent {
-  width: 32px;
-  height: 1px;
-  background-color: #B2260E;
-  display: block;
+/* ── Scrollbar ───────────────────────────────────────────── */
+::-webkit-scrollbar { width: 2px; }
+::-webkit-scrollbar-track { background: #0a0a0a; }
+::-webkit-scrollbar-thumb { background: #1a1a1a; }
+::-webkit-scrollbar-thumb:hover { background: #B2260E; }
+
+::selection {
+  background: rgba(178, 38, 14, 0.25);
+  color: #ffffff;
 }

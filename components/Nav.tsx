@@ -2,9 +2,18 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 export default function Nav() {
   const pathname = usePathname();
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handle = () => setScrolled(window.scrollY > 48);
+    window.addEventListener("scroll", handle, { passive: true });
+    handle();
+    return () => window.removeEventListener("scroll", handle);
+  }, []);
 
   return (
     <header
@@ -14,23 +23,27 @@ export default function Nav() {
         left: 0,
         right: 0,
         zIndex: 100,
-        padding: "28px 48px",
+        padding: `${scrolled ? "20px" : "28px"} clamp(24px, 5.5vw, 96px)`,
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
-        backgroundColor: "rgba(10, 10, 10, 0.85)",
-        backdropFilter: "blur(16px)",
-        WebkitBackdropFilter: "blur(16px)",
-        borderBottom: "1px solid rgba(255,255,255,0.05)",
+        backgroundColor: scrolled ? "rgba(10, 10, 10, 0.92)" : "transparent",
+        backdropFilter: scrolled ? "blur(24px)" : "none",
+        WebkitBackdropFilter: scrolled ? "blur(24px)" : "none",
+        borderBottom: scrolled
+          ? "1px solid rgba(255,255,255,0.05)"
+          : "1px solid transparent",
+        transition:
+          "padding 0.4s ease, background-color 0.4s ease, backdrop-filter 0.4s ease, border-color 0.4s ease",
       }}
     >
       {/* Wordmark */}
       <Link href="/" style={{ textDecoration: "none" }}>
         <span
           style={{
-            fontSize: "15px",
+            fontSize: "13px",
             fontWeight: 700,
-            letterSpacing: "0.22em",
+            letterSpacing: "0.3em",
             color: "#ffffff",
             textTransform: "uppercase",
           }}
@@ -40,11 +53,8 @@ export default function Nav() {
       </Link>
 
       {/* Nav links */}
-      <nav style={{ display: "flex", gap: "40px", alignItems: "center" }}>
-        <Link
-          href="/"
-          className={`nav-link${pathname === "/" ? " active" : ""}`}
-        >
+      <nav style={{ display: "flex", gap: "36px", alignItems: "center" }}>
+        <Link href="/" className={`nav-link${pathname === "/" ? " active" : ""}`}>
           Home
         </Link>
         <Link
