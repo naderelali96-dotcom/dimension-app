@@ -10,8 +10,9 @@ export default function Home() {
           minHeight: "100vh",
           display: "flex",
           flexDirection: "column",
-          alignItems: "flex-start",
+          alignItems: "center",
           justifyContent: "center",
+          textAlign: "center",
           padding: "0 48px",
           paddingTop: "120px",
           paddingBottom: "96px",
@@ -74,6 +75,7 @@ export default function Home() {
             style={{
               display: "flex",
               alignItems: "center",
+              justifyContent: "center",
               gap: "16px",
               marginBottom: "40px",
             }}
@@ -121,7 +123,7 @@ export default function Home() {
               lineHeight: "1.7",
               color: "rgba(255,255,255,0.45)",
               maxWidth: "440px",
-              marginBottom: "56px",
+              margin: "0 auto 56px",
               letterSpacing: "0.01em",
             }}
           >
@@ -133,7 +135,7 @@ export default function Home() {
           {/* CTA */}
           <div
             className="fade-up fade-up-delay-4"
-            style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}
+            style={{ display: "flex", justifyContent: "center", gap: "16px", flexWrap: "wrap" }}
           >
             <BookingButton className="btn-glass">Book Now</BookingButton>
           </div>

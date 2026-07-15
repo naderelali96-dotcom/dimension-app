@@ -15,28 +15,18 @@ export default function Nav() {
         left: 0,
         right: 0,
         zIndex: 100,
-        padding: "28px 48px",
-        display: "flex",
+        padding: "24px 48px",
+        display: "grid",
+        gridTemplateColumns: "1fr auto 1fr",
         alignItems: "center",
-        justifyContent: "space-between",
         backgroundColor: "rgba(10, 10, 10, 0.85)",
         backdropFilter: "blur(16px)",
         WebkitBackdropFilter: "blur(16px)",
         borderBottom: "1px solid rgba(255,255,255,0.05)",
       }}
     >
-      {/* Wordmark */}
-      <Link href="/" style={{ display: "flex", alignItems: "center" }}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="/logo-wordmark-white.svg"
-          alt="Dimension"
-          style={{ height: "18px", width: "auto" }}
-        />
-      </Link>
-
       {/* Nav links */}
-      <nav style={{ display: "flex", gap: "40px", alignItems: "center" }}>
+      <nav style={{ display: "flex", gap: "40px", alignItems: "center", justifySelf: "start" }}>
         <Link
           href="/"
           className={`nav-link${pathname === "/" ? " active" : ""}`}
@@ -55,8 +45,22 @@ export default function Nav() {
         >
           About
         </Link>
-        <BookingButton className="btn-glass-accent">Book Now</BookingButton>
       </nav>
+
+      {/* Wordmark */}
+      <Link href="/" style={{ display: "flex", alignItems: "center", justifySelf: "center" }}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/logo-wordmark-white.svg"
+          alt="Dimension"
+          style={{ height: "20px", width: "auto" }}
+        />
+      </Link>
+
+      {/* Book CTA */}
+      <div style={{ justifySelf: "end" }}>
+        <BookingButton className="btn-glass-accent">Book Now</BookingButton>
+      </div>
     </header>
   );
 }
