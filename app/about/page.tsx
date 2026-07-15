@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { BOOKING_URL } from "@/lib/site-config";
 
 const barbers = [
   {
@@ -370,9 +370,14 @@ export default function AboutPage() {
         >
           Come Meet the Team.
         </h2>
-        <Link href="/#book" className="btn-glass">
+        <a
+          href={BOOKING_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-glass"
+        >
           Book a Session
-        </Link>
+        </a>
       </section>
     </>
   );

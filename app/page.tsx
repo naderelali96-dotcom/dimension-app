@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { BOOKING_URL } from "@/lib/site-config";
 
 export default function Home() {
   return (
@@ -100,7 +101,12 @@ export default function Home() {
             className="fade-up fade-up-delay-4"
             style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}
           >
-            <a href="#book" className="btn-glass">
+            <a
+              href={BOOKING_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-glass"
+            >
               Book Your Session
             </a>
             <Link href="/services" className="btn-glass" style={{ color: "rgba(255,255,255,0.5)" }}>
@@ -315,11 +321,13 @@ export default function Home() {
           Book Your Seat.
         </h2>
         <a
-          href="tel:+15550001234"
+          href={BOOKING_URL}
+          target="_blank"
+          rel="noopener noreferrer"
           className="btn-glass"
           style={{ fontSize: "12px", padding: "18px 48px" }}
         >
-          Call to Book — (555) 000-1234
+          Book Online — Powered by Squire
         </a>
       </section>
     </>

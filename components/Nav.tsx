@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { BOOKING_URL } from "@/lib/site-config";
 
 export default function Nav() {
   const pathname = usePathname();
@@ -59,9 +60,14 @@ export default function Nav() {
         >
           About
         </Link>
-        <Link href="/#book" className="btn-glass-accent">
+        <a
+          href={BOOKING_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-glass-accent"
+        >
           Book Now
-        </Link>
+        </a>
       </nav>
     </header>
   );

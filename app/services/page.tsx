@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { BOOKING_URL } from "@/lib/site-config";
 
 const services = [
   {
@@ -300,9 +300,14 @@ export default function ServicesPage() {
         >
           Let&apos;s Get to Work.
         </h2>
-        <Link href="/#book" className="btn-glass">
+        <a
+          href={BOOKING_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-glass"
+        >
           Book Now
-        </Link>
+        </a>
       </section>
     </>
   );
