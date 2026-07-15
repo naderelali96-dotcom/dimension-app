@@ -87,7 +87,7 @@ export default function Home() {
                 fontWeight: 400,
                 letterSpacing: "0.22em",
                 textTransform: "uppercase",
-                color: "rgba(255,255,255,0.45)",
+                color: "rgba(245,237,220,0.45)",
               }}
             >
               Premium Barbershop · Est. 2020
@@ -102,7 +102,7 @@ export default function Home() {
               fontWeight: 800,
               lineHeight: "1.05",
               letterSpacing: "-0.02em",
-              color: "#ffffff",
+              color: "#F5EDDC",
               marginBottom: "48px",
               textTransform: "uppercase",
             }}
@@ -119,7 +119,7 @@ export default function Home() {
               fontSize: "16px",
               fontWeight: 300,
               lineHeight: "1.7",
-              color: "rgba(255,255,255,0.45)",
+              color: "rgba(245,237,220,0.45)",
               maxWidth: "440px",
               margin: "0 auto 56px",
               letterSpacing: "0.01em",
@@ -156,7 +156,7 @@ export default function Home() {
             style={{
               width: "1px",
               height: "60px",
-              background: "linear-gradient(to bottom, rgba(255,255,255,0.25), transparent)",
+              background: "linear-gradient(to bottom, rgba(245,237,220,0.25), transparent)",
             }}
           />
           <span
@@ -164,7 +164,7 @@ export default function Home() {
               fontSize: "10px",
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "rgba(255,255,255,0.25)",
+              color: "rgba(245,237,220,0.25)",
               writingMode: "vertical-rl",
             }}
           >
@@ -176,8 +176,8 @@ export default function Home() {
       {/* ── MARQUEE ─────────────────────────────────────── */}
       <div
         style={{
-          borderTop: "1px solid rgba(255,255,255,0.06)",
-          borderBottom: "1px solid rgba(255,255,255,0.06)",
+          borderTop: "1px solid rgba(245,237,220,0.06)",
+          borderBottom: "1px solid rgba(245,237,220,0.06)",
           padding: "18px 0",
           overflow: "hidden",
           whiteSpace: "nowrap",
@@ -198,7 +198,7 @@ export default function Home() {
                 fontWeight: 400,
                 letterSpacing: "0.22em",
                 textTransform: "uppercase",
-                color: "rgba(255,255,255,0.18)",
+                color: "rgba(245,237,220,0.18)",
                 paddingRight: "64px",
               }}
             >
@@ -248,7 +248,7 @@ export default function Home() {
               fontSize: "15px",
               fontWeight: 300,
               lineHeight: "1.8",
-              color: "rgba(255,255,255,0.5)",
+              color: "rgba(245,237,220,0.5)",
               marginBottom: "40px",
             }}
           >
@@ -267,8 +267,8 @@ export default function Home() {
             display: "grid",
             gridTemplateColumns: "1fr 1fr",
             gap: "1px",
-            background: "rgba(255,255,255,0.06)",
-            border: "1px solid rgba(255,255,255,0.06)",
+            background: "rgba(245,237,220,0.06)",
+            border: "1px solid rgba(245,237,220,0.06)",
           }}
         >
           {[
@@ -289,7 +289,7 @@ export default function Home() {
                   fontSize: "clamp(32px, 3vw, 44px)",
                   fontWeight: 800,
                   letterSpacing: "-0.02em",
-                  color: "#ffffff",
+                  color: "#F5EDDC",
                   marginBottom: "8px",
                 }}
               >
@@ -301,7 +301,7 @@ export default function Home() {
                   fontWeight: 400,
                   letterSpacing: "0.14em",
                   textTransform: "uppercase",
-                  color: "rgba(255,255,255,0.35)",
+                  color: "rgba(245,237,220,0.35)",
                 }}
               >
                 {label}
@@ -316,7 +316,7 @@ export default function Home() {
         id="book"
         style={{
           padding: "120px 48px",
-          borderTop: "1px solid rgba(255,255,255,0.06)",
+          borderTop: "1px solid rgba(245,237,220,0.06)",
           textAlign: "center",
         }}
       >
@@ -326,7 +326,7 @@ export default function Home() {
             fontWeight: 400,
             letterSpacing: "0.22em",
             textTransform: "uppercase",
-            color: "rgba(255,255,255,0.35)",
+            color: "rgba(245,237,220,0.35)",
             display: "block",
             marginBottom: "28px",
           }}

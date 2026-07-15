@@ -59,7 +59,7 @@ export default function BookingButton({
               width: "100%",
               maxWidth: "420px",
               background: "#0a0a0a",
-              border: "1px solid rgba(255,255,255,0.12)",
+              border: "1px solid rgba(245,237,220,0.12)",
               padding: "48px 40px",
               textAlign: "center",
             }}
@@ -78,8 +78,8 @@ export default function BookingButton({
                 alignItems: "center",
                 justifyContent: "center",
                 background: "transparent",
-                border: "1px solid rgba(255,255,255,0.18)",
-                color: "#fff",
+                border: "1px solid rgba(245,237,220,0.18)",
+                color: "#F5EDDC",
                 fontSize: "16px",
                 cursor: "pointer",
               }}
@@ -113,7 +113,7 @@ export default function BookingButton({
                 fontSize: "13px",
                 fontWeight: 300,
                 lineHeight: "1.7",
-                color: "rgba(255,255,255,0.5)",
+                color: "rgba(245,237,220,0.5)",
                 marginBottom: "32px",
               }}
             >

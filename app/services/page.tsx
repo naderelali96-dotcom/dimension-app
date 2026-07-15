@@ -85,7 +85,7 @@ export default function ServicesPage() {
           paddingBottom: "80px",
           paddingLeft: "48px",
           paddingRight: "48px",
-          borderBottom: "1px solid rgba(255,255,255,0.06)",
+          borderBottom: "1px solid rgba(245,237,220,0.06)",
         }}
       >
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
@@ -104,7 +104,7 @@ export default function ServicesPage() {
                 fontWeight: 400,
                 letterSpacing: "0.22em",
                 textTransform: "uppercase",
-                color: "rgba(255,255,255,0.4)",
+                color: "rgba(245,237,220,0.4)",
               }}
             >
               What We Do
@@ -136,7 +136,7 @@ export default function ServicesPage() {
                 fontSize: "14px",
                 fontWeight: 300,
                 lineHeight: "1.7",
-                color: "rgba(255,255,255,0.4)",
+                color: "rgba(245,237,220,0.4)",
                 maxWidth: "340px",
                 textAlign: "right",
               }}
@@ -162,7 +162,7 @@ export default function ServicesPage() {
             display: "grid",
             gridTemplateColumns: "repeat(3, 1fr)",
             gap: "1px",
-            background: "rgba(255,255,255,0.06)",
+            background: "rgba(245,237,220,0.06)",
           }}
         >
           {services.map((s) => (
@@ -198,7 +198,7 @@ export default function ServicesPage() {
                   fontSize: "11px",
                   fontWeight: 400,
                   letterSpacing: "0.18em",
-                  color: "rgba(255,255,255,0.2)",
+                  color: "rgba(245,237,220,0.2)",
                   marginBottom: "24px",
                   fontVariantNumeric: "tabular-nums",
                 }}
@@ -225,7 +225,7 @@ export default function ServicesPage() {
                   fontSize: "13px",
                   fontWeight: 300,
                   lineHeight: "1.7",
-                  color: "rgba(255,255,255,0.45)",
+                  color: "rgba(245,237,220,0.45)",
                   marginBottom: "36px",
                 }}
               >
@@ -238,7 +238,7 @@ export default function ServicesPage() {
                   display: "flex",
                   justifyContent: "space-between",
                   alignItems: "center",
-                  borderTop: "1px solid rgba(255,255,255,0.07)",
+                  borderTop: "1px solid rgba(245,237,220,0.07)",
                   paddingTop: "20px",
                 }}
               >
@@ -247,7 +247,7 @@ export default function ServicesPage() {
                     fontSize: "22px",
                     fontWeight: 700,
                     letterSpacing: "-0.01em",
-                    color: "#ffffff",
+                    color: "#F5EDDC",
                   }}
                 >
                   {s.price}
@@ -258,7 +258,7 @@ export default function ServicesPage() {
                     fontWeight: 400,
                     letterSpacing: "0.14em",
                     textTransform: "uppercase",
-                    color: "rgba(255,255,255,0.28)",
+                    color: "rgba(245,237,220,0.28)",
                   }}
                 >
                   {s.duration}
@@ -272,7 +272,7 @@ export default function ServicesPage() {
       {/* ── CTA ─────────────────────────────────────────── */}
       <section
         style={{
-          borderTop: "1px solid rgba(255,255,255,0.06)",
+          borderTop: "1px solid rgba(245,237,220,0.06)",
           padding: "100px 48px",
           textAlign: "center",
         }}
@@ -283,7 +283,7 @@ export default function ServicesPage() {
             fontWeight: 400,
             letterSpacing: "0.22em",
             textTransform: "uppercase",
-            color: "rgba(255,255,255,0.3)",
+            color: "rgba(245,237,220,0.3)",
             marginBottom: "24px",
           }}
         >

@@ -17,7 +17,7 @@ html {
 
 body {
   background-color: #0a0a0a;
-  color: #ffffff;
+  color: #F5EDDC;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
@@ -29,9 +29,9 @@ body {
   align-items: center;
   justify-content: center;
   padding: 20px 52px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  color: #ffffff;
+  background: rgba(245, 237, 220, 0.04);
+  border: 1px solid rgba(245, 237, 220, 0.18);
+  color: #F5EDDC;
   font-size: 13px;
   font-weight: 500;
   letter-spacing: 0.18em;
@@ -45,8 +45,8 @@ body {
 }
 
 .btn-glass:hover {
-  background: rgba(255, 255, 255, 0.14);
-  border-color: rgba(255, 255, 255, 0.45);
+  background: rgba(245, 237, 220, 0.14);
+  border-color: rgba(245, 237, 220, 0.45);
 }
 
 .btn-glass-accent {
@@ -54,8 +54,8 @@ body {
   align-items: center;
   justify-content: center;
   padding: 18px 44px;
-  background: #ffffff;
-  border: 1px solid #ffffff;
+  background: #F5EDDC;
+  border: 1px solid #F5EDDC;
   color: #0a0a0a;
   font-size: 12px;
   font-weight: 700;
@@ -67,15 +67,15 @@ body {
 }
 
 .btn-glass-accent:hover {
-  background: rgba(255, 255, 255, 0.85);
-  border-color: rgba(255, 255, 255, 0.85);
+  background: rgba(245, 237, 220, 0.85);
+  border-color: rgba(245, 237, 220, 0.85);
 }
 
 /* Book CTA sits on the cream nav bar, so invert to a dark solid button */
 header .btn-glass-accent {
   background: #0a0a0a;
   border-color: #0a0a0a;
-  color: #ffffff;
+  color: #F5EDDC;
 }
 
 header .btn-glass-accent:hover {
@@ -112,7 +112,7 @@ header .btn-glass-accent:hover {
 
 ::selection {
   background: rgba(178, 38, 14, 0.28);
-  color: #ffffff;
+  color: #F5EDDC;
 }
 
 /* Nav link */
@@ -121,14 +121,14 @@ header .btn-glass-accent:hover {
   font-weight: 400;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(245, 237, 220, 0.55);
   text-decoration: none;
   transition: color 0.25s ease;
 }
 
 .nav-link:hover,
 .nav-link.active {
-  color: #ffffff;
+  color: #F5EDDC;
 }
 
 /* Nav sits on a cream bar, so its links need a dark palette instead */
@@ -141,10 +141,20 @@ header .nav-link.active {
   color: #0a0a0a;
 }
 
+/* Footer sits on the same cream bar as the nav */
+footer .nav-link {
+  color: rgba(10, 10, 10, 0.55);
+}
+
+footer .nav-link:hover,
+footer .nav-link.active {
+  color: #0a0a0a;
+}
+
 /* Service card */
 .service-card {
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(245, 237, 220, 0.07);
+  background: rgba(245, 237, 220, 0.02);
   transition: border-color 0.3s ease, background 0.3s ease;
   cursor: default;
 }

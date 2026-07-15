@@ -34,7 +34,7 @@ export default function AboutPage() {
           paddingBottom: "80px",
           paddingLeft: "48px",
           paddingRight: "48px",
-          borderBottom: "1px solid rgba(255,255,255,0.06)",
+          borderBottom: "1px solid rgba(245,237,220,0.06)",
         }}
       >
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
@@ -53,7 +53,7 @@ export default function AboutPage() {
                 fontWeight: 400,
                 letterSpacing: "0.22em",
                 textTransform: "uppercase",
-                color: "rgba(255,255,255,0.4)",
+                color: "rgba(245,237,220,0.4)",
               }}
             >
               Who We Are
@@ -100,7 +100,7 @@ export default function AboutPage() {
           >
             Built on
             <br />
-            <span style={{ color: "rgba(255,255,255,0.2)" }}>a single</span>
+            <span style={{ color: "rgba(245,237,220,0.2)" }}>a single</span>
             <br />
             belief.
           </h2>
@@ -113,7 +113,7 @@ export default function AboutPage() {
               fontSize: "15px",
               fontWeight: 300,
               lineHeight: "1.9",
-              color: "rgba(255,255,255,0.55)",
+              color: "rgba(245,237,220,0.55)",
               marginBottom: "28px",
             }}
           >
@@ -127,7 +127,7 @@ export default function AboutPage() {
               fontSize: "15px",
               fontWeight: 300,
               lineHeight: "1.9",
-              color: "rgba(255,255,255,0.55)",
+              color: "rgba(245,237,220,0.55)",
               marginBottom: "28px",
             }}
           >
@@ -140,7 +140,7 @@ export default function AboutPage() {
               fontSize: "15px",
               fontWeight: 300,
               lineHeight: "1.9",
-              color: "rgba(255,255,255,0.55)",
+              color: "rgba(245,237,220,0.55)",
             }}
           >
             Dimension is more than a name. It&apos;s a reminder that craft
@@ -153,8 +153,8 @@ export default function AboutPage() {
       {/* ── DIVIDER + VALUES ────────────────────────────── */}
       <section
         style={{
-          borderTop: "1px solid rgba(255,255,255,0.06)",
-          borderBottom: "1px solid rgba(255,255,255,0.06)",
+          borderTop: "1px solid rgba(245,237,220,0.06)",
+          borderBottom: "1px solid rgba(245,237,220,0.06)",
           padding: "80px 48px",
         }}
       >
@@ -165,7 +165,7 @@ export default function AboutPage() {
             display: "grid",
             gridTemplateColumns: "repeat(3, 1fr)",
             gap: "1px",
-            background: "rgba(255,255,255,0.06)",
+            background: "rgba(245,237,220,0.06)",
           }}
         >
           {[
@@ -201,7 +201,7 @@ export default function AboutPage() {
                   fontSize: "13px",
                   fontWeight: 300,
                   lineHeight: "1.8",
-                  color: "rgba(255,255,255,0.45)",
+                  color: "rgba(245,237,220,0.45)",
                 }}
               >
                 {body}
@@ -234,7 +234,7 @@ export default function AboutPage() {
               fontWeight: 400,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "rgba(255,255,255,0.4)",
+              color: "rgba(245,237,220,0.4)",
             }}
           >
             The Team
@@ -246,7 +246,7 @@ export default function AboutPage() {
             display: "grid",
             gridTemplateColumns: "repeat(3, 1fr)",
             gap: "1px",
-            background: "rgba(255,255,255,0.06)",
+            background: "rgba(245,237,220,0.06)",
           }}
         >
           {barbers.map((b) => (
@@ -264,7 +264,7 @@ export default function AboutPage() {
                 style={{
                   width: "64px",
                   height: "64px",
-                  border: "1px solid rgba(255,255,255,0.12)",
+                  border: "1px solid rgba(245,237,220,0.12)",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
@@ -276,7 +276,7 @@ export default function AboutPage() {
                     fontSize: "16px",
                     fontWeight: 700,
                     letterSpacing: "0.06em",
-                    color: "rgba(255,255,255,0.7)",
+                    color: "rgba(245,237,220,0.7)",
                   }}
                 >
                   {b.initials}
@@ -313,7 +313,7 @@ export default function AboutPage() {
                   fontSize: "13px",
                   fontWeight: 300,
                   lineHeight: "1.8",
-                  color: "rgba(255,255,255,0.45)",
+                  color: "rgba(245,237,220,0.45)",
                   marginBottom: "28px",
                 }}
               >
@@ -330,8 +330,8 @@ export default function AboutPage() {
                       fontWeight: 400,
                       letterSpacing: "0.14em",
                       textTransform: "uppercase",
-                      color: "rgba(255,255,255,0.35)",
-                      border: "1px solid rgba(255,255,255,0.1)",
+                      color: "rgba(245,237,220,0.35)",
+                      border: "1px solid rgba(245,237,220,0.1)",
                       padding: "5px 12px",
                     }}
                   >
@@ -347,7 +347,7 @@ export default function AboutPage() {
       {/* ── CTA ─────────────────────────────────────────── */}
       <section
         style={{
-          borderTop: "1px solid rgba(255,255,255,0.06)",
+          borderTop: "1px solid rgba(245,237,220,0.06)",
           padding: "100px 48px",
           textAlign: "center",
         }}

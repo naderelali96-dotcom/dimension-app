@@ -4,7 +4,8 @@ export default function Footer() {
   return (
     <footer
       style={{
-        borderTop: "1px solid rgba(255,255,255,0.06)",
+        backgroundColor: "#F5EDDC",
+        borderTop: "1px solid rgba(10,10,10,0.08)",
         padding: "48px",
         display: "flex",
         alignItems: "center",
@@ -15,7 +16,7 @@ export default function Footer() {
     >
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        src="/logo-wordmark-white.svg"
+        src="/logo-wordmark-dark.svg"
         alt="Dimension"
         style={{ height: "16px", width: "auto" }}
       />
@@ -26,7 +27,7 @@ export default function Footer() {
         <Link href="/about" className="nav-link">About</Link>
       </div>
 
-      <p style={{ fontSize: "11px", color: "rgba(255,255,255,0.28)", letterSpacing: "0.06em" }}>
+      <p style={{ fontSize: "11px", color: "rgba(10,10,10,0.4)", letterSpacing: "0.06em" }}>
         © {new Date().getFullYear()} Dimension Barbershop. All rights reserved.
       </p>
     </footer>
