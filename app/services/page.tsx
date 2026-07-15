@@ -1,4 +1,4 @@
-import { BOOKING_URL } from "@/lib/site-config";
+import BookingButton from "@/components/BookingButton";
 
 const services = [
   {
@@ -300,14 +300,7 @@ export default function ServicesPage() {
         >
           Let&apos;s Get to Work.
         </h2>
-        <a
-          href={BOOKING_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn-glass"
-        >
-          Book Now
-        </a>
+        <BookingButton className="btn-glass">Book Now</BookingButton>
       </section>
     </>
   );

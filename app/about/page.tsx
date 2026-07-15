@@ -1,33 +1,26 @@
-import { BOOKING_URL } from "@/lib/site-config";
+import BookingButton from "@/components/BookingButton";
 
 const barbers = [
   {
-    initials: "NK",
-    name: "Nader K.",
+    initials: "NE",
+    name: "Nader E.",
     title: "Founder & Head Barber",
-    bio: "With over 12 years behind the chair, Nader built Dimension from a single station into one of the city's most respected shops. Trained in New York and London, his work speaks in clean lines and intentional shape.",
+    bio: "Nader built Dimension from a single station into a shop defined by precision and standards that never bend. Every cut carries his signature — clean lines and intentional shape.",
     specialties: ["Scissor Work", "Fades", "Beard Sculpting"],
   },
   {
-    initials: "JM",
-    name: "Jordan M.",
-    title: "Master Barber",
-    bio: "Jordan brings a fine-art sensibility to every cut. A former illustrator turned barber, he approaches hair as canvas — studying structure, texture, and movement before touching a blade.",
-    specialties: ["Design Work", "Texture Cuts", "Hot Towel Shave"],
-  },
-  {
-    initials: "CR",
-    name: "Carlos R.",
+    initials: "TP",
+    name: "Tony P.",
     title: "Senior Barber",
-    bio: "Carlos built his reputation in the Dominican tradition of barbering — high volume, high precision, unmatched speed. In seven years at Dimension, he has never missed a fade.",
+    bio: "Tony brings speed and precision in equal measure. Years behind the chair have sharpened his eye for symmetry and his instinct for exactly what a client is asking for.",
     specialties: ["High Fades", "Lineups", "Classic Cuts"],
   },
   {
-    initials: "TP",
-    name: "Tariq P.",
-    title: "Barber",
-    bio: "Tariq joined Dimension three years ago with a decade of experience in Atlanta's barbershop culture. His clients follow him for his instinctive sense of shape and effortless conversation.",
-    specialties: ["Skin Fades", "Beard Care", "Kids Cuts"],
+    initials: "JC",
+    name: "Jason C.",
+    title: "Apprentice Barber",
+    bio: "Jason is training under Dimension's senior barbers, building his craft one cut at a time. Patient, detail-obsessed, and hungry to earn his own chair.",
+    specialties: ["Fades", "Lineups", "Kids Cuts"],
   },
 ];
 
@@ -251,7 +244,7 @@ export default function AboutPage() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(2, 1fr)",
+            gridTemplateColumns: "repeat(3, 1fr)",
             gap: "1px",
             background: "rgba(255,255,255,0.06)",
           }}
@@ -370,14 +363,7 @@ export default function AboutPage() {
         >
           Come Meet the Team.
         </h2>
-        <a
-          href={BOOKING_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn-glass"
-        >
-          Book a Session
-        </a>
+        <BookingButton className="btn-glass">Book Now</BookingButton>
       </section>
     </>
   );

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { BOOKING_URL } from "@/lib/site-config";
+import BookingButton from "@/components/BookingButton";
 
 export default function Nav() {
   const pathname = usePathname();
@@ -55,14 +55,7 @@ export default function Nav() {
         >
           About
         </Link>
-        <a
-          href={BOOKING_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn-glass-accent"
-        >
-          Book Now
-        </a>
+        <BookingButton className="btn-glass-accent">Book Now</BookingButton>
       </nav>
     </header>
   );

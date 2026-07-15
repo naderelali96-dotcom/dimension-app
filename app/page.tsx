@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { BOOKING_URL } from "@/lib/site-config";
+import BookingButton from "@/components/BookingButton";
 
 export default function Home() {
   return (
@@ -19,6 +19,39 @@ export default function Home() {
           overflow: "hidden",
         }}
       >
+        {/* Background video */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          style={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            minWidth: "100%",
+            minHeight: "100%",
+            width: "auto",
+            height: "auto",
+            transform: "translate(-50%, -50%)",
+            objectFit: "cover",
+            zIndex: 0,
+          }}
+        >
+          <source src="/videos/hero.mp4" type="video/mp4" />
+        </video>
+
+        {/* Dark overlay for legibility */}
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            background:
+              "linear-gradient(180deg, rgba(10,10,10,0.35) 0%, rgba(10,10,10,0.25) 40%, rgba(10,10,10,0.9) 100%)",
+            zIndex: 1,
+          }}
+        />
+
         {/* Subtle red glow */}
         <div
           style={{
@@ -30,10 +63,11 @@ export default function Home() {
             borderRadius: "50%",
             background: "radial-gradient(circle, rgba(178,38,14,0.07) 0%, transparent 70%)",
             pointerEvents: "none",
+            zIndex: 1,
           }}
         />
 
-        <div style={{ maxWidth: "900px" }}>
+        <div style={{ maxWidth: "900px", position: "relative", zIndex: 2 }}>
           {/* Pre-label */}
           <div
             className="fade-up fade-up-delay-1"
@@ -101,17 +135,7 @@ export default function Home() {
             className="fade-up fade-up-delay-4"
             style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}
           >
-            <a
-              href={BOOKING_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-glass"
-            >
-              Book Your Session
-            </a>
-            <Link href="/services" className="btn-glass" style={{ color: "rgba(255,255,255,0.5)" }}>
-              View Services
-            </Link>
+            <BookingButton className="btn-glass">Book Now</BookingButton>
           </div>
         </div>
 
@@ -121,6 +145,7 @@ export default function Home() {
             position: "absolute",
             bottom: "40px",
             right: "48px",
+            zIndex: 2,
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
@@ -249,7 +274,7 @@ export default function Home() {
           {[
             { num: "5+", label: "Years in business" },
             { num: "10K+", label: "Clients served" },
-            { num: "4", label: "Master barbers" },
+            { num: "3", label: "Master barbers" },
             { num: "100%", label: "Satisfaction" },
           ].map(({ num, label }) => (
             <div
@@ -320,15 +345,9 @@ export default function Home() {
         >
           Book Your Seat.
         </h2>
-        <a
-          href={BOOKING_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn-glass"
-          style={{ fontSize: "12px", padding: "18px 48px" }}
-        >
-          Book Online — Powered by Squire
-        </a>
+        <BookingButton className="btn-glass" style={{ fontSize: "12px", padding: "18px 48px" }}>
+          Book Now
+        </BookingButton>
       </section>
     </>
   );
