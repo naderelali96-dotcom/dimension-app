@@ -26,18 +26,13 @@ export default function Nav() {
       }}
     >
       {/* Wordmark */}
-      <Link href="/" style={{ textDecoration: "none" }}>
-        <span
-          style={{
-            fontSize: "15px",
-            fontWeight: 700,
-            letterSpacing: "0.22em",
-            color: "#ffffff",
-            textTransform: "uppercase",
-          }}
-        >
-          Dimension
-        </span>
+      <Link href="/" style={{ display: "flex", alignItems: "center" }}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/logo-wordmark-white.svg"
+          alt="Dimension"
+          style={{ height: "18px", width: "auto" }}
+        />
       </Link>
 
       {/* Nav links */}

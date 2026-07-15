@@ -13,17 +13,12 @@ export default function Footer() {
         gap: "24px",
       }}
     >
-      <span
-        style={{
-          fontSize: "13px",
-          fontWeight: 700,
-          letterSpacing: "0.22em",
-          color: "#ffffff",
-          textTransform: "uppercase",
-        }}
-      >
-        Dimension
-      </span>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src="/logo-wordmark-white.svg"
+        alt="Dimension"
+        style={{ height: "16px", width: "auto" }}
+      />
 
       <div style={{ display: "flex", gap: "32px" }}>
         <Link href="/" className="nav-link">Home</Link>
