@@ -19,10 +19,10 @@ export default function Nav() {
         display: "grid",
         gridTemplateColumns: "1fr auto 1fr",
         alignItems: "center",
-        backgroundColor: "rgba(10, 10, 10, 0.85)",
+        backgroundColor: "rgba(245, 237, 220, 0.85)",
         backdropFilter: "blur(16px)",
         WebkitBackdropFilter: "blur(16px)",
-        borderBottom: "1px solid rgba(255,255,255,0.05)",
+        borderBottom: "1px solid rgba(10,10,10,0.08)",
       }}
     >
       {/* Nav links */}
@@ -51,7 +51,7 @@ export default function Nav() {
       <Link href="/" style={{ display: "flex", alignItems: "center", justifySelf: "center" }}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/logo-wordmark-white.svg"
+          src="/logo-wordmark-dark.svg"
           alt="Dimension"
           style={{ height: "20px", width: "auto" }}
         />

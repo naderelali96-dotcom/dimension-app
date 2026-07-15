@@ -11,11 +11,11 @@ export default function Home() {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          justifyContent: "center",
+          justifyContent: "flex-end",
           textAlign: "center",
           padding: "0 48px",
           paddingTop: "120px",
-          paddingBottom: "96px",
+          paddingBottom: "140px",
           position: "relative",
           overflow: "hidden",
         }}
@@ -98,20 +98,18 @@ export default function Home() {
           <h1
             className="fade-up fade-up-delay-2"
             style={{
-              fontSize: "clamp(56px, 9vw, 128px)",
+              fontSize: "clamp(36px, 6vw, 84px)",
               fontWeight: 800,
-              lineHeight: "0.92",
-              letterSpacing: "-0.03em",
+              lineHeight: "1.05",
+              letterSpacing: "-0.02em",
               color: "#ffffff",
               marginBottom: "48px",
               textTransform: "uppercase",
             }}
           >
-            Precision
+            Where Precision
             <br />
-            <span style={{ color: "rgba(255,255,255,0.18)" }}>is the</span>
-            <br />
-            Standard.
+            Meets Privacy
           </h1>
 
           {/* Sub */}
