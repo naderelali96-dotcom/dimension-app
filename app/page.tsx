@@ -1,5 +1,6 @@
 import Link from "next/link";
 import BookingButton from "@/components/BookingButton";
+import { SERVICES } from "@/lib/site-config";
 
 export default function Home() {
   return (
@@ -311,53 +312,100 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── BOOK SECTION ────────────────────────────────── */}
+      {/* ── SERVICES ────────────────────────────────────── */}
       <section
-        id="book"
         style={{
-          padding: "120px 48px",
-          backgroundColor: "#F5EDDC",
-          textAlign: "center",
+          padding: "0 48px 140px",
+          maxWidth: "1200px",
+          margin: "0 auto",
         }}
       >
-        <span
+        <div
           style={{
-            fontSize: "11px",
-            fontWeight: 400,
-            letterSpacing: "0.22em",
-            textTransform: "uppercase",
-            color: "rgba(10,10,10,0.45)",
-            display: "block",
-            marginBottom: "28px",
+            display: "flex",
+            alignItems: "center",
+            gap: "16px",
+            marginBottom: "64px",
           }}
         >
-          Ready?
-        </span>
-        <h2
+          <span className="line-accent" />
+          <span
+            style={{
+              fontSize: "11px",
+              fontWeight: 400,
+              letterSpacing: "0.22em",
+              textTransform: "uppercase",
+              color: "rgba(245,237,220,0.4)",
+            }}
+          >
+            What We Do
+          </span>
+        </div>
+
+        <div
           style={{
-            fontSize: "clamp(40px, 6vw, 80px)",
-            fontWeight: 800,
-            lineHeight: "1",
-            letterSpacing: "-0.03em",
-            textTransform: "uppercase",
-            color: "#0a0a0a",
-            marginBottom: "48px",
+            display: "grid",
+            gridTemplateColumns: "repeat(3, 1fr)",
+            gap: "1px",
+            background: "rgba(245,237,220,0.06)",
+            border: "1px solid rgba(245,237,220,0.06)",
           }}
         >
-          Book Your Seat.
-        </h2>
-        <BookingButton
-          className="btn-glass-accent"
-          style={{
-            fontSize: "12px",
-            padding: "18px 48px",
-            backgroundColor: "#0a0a0a",
-            borderColor: "#0a0a0a",
-            color: "#F5EDDC",
-          }}
-        >
-          Book Now
-        </BookingButton>
+          {SERVICES.map((s) => (
+            <div
+              key={s.id}
+              className="service-card"
+              style={{ padding: "48px 36px" }}
+            >
+              <span
+                style={{
+                  display: "block",
+                  fontSize: "11px",
+                  fontWeight: 400,
+                  letterSpacing: "0.18em",
+                  color: "rgba(245,237,220,0.2)",
+                  marginBottom: "24px",
+                  fontVariantNumeric: "tabular-nums",
+                }}
+              >
+                {s.id}
+              </span>
+              <h3
+                style={{
+                  fontSize: "20px",
+                  fontWeight: 700,
+                  letterSpacing: "-0.01em",
+                  marginBottom: "28px",
+                  lineHeight: "1.2",
+                }}
+              >
+                {s.name}
+              </h3>
+              <div
+                style={{
+                  borderTop: "1px solid rgba(245,237,220,0.07)",
+                  paddingTop: "20px",
+                }}
+              >
+                <span
+                  style={{
+                    fontSize: "11px",
+                    fontWeight: 400,
+                    letterSpacing: "0.14em",
+                    textTransform: "uppercase",
+                    color: "rgba(245,237,220,0.4)",
+                  }}
+                >
+                  {s.duration}
+                </span>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div style={{ textAlign: "center", marginTop: "56px" }}>
+          <BookingButton className="btn-glass">Book Now</BookingButton>
+        </div>
       </section>
     </>
   );

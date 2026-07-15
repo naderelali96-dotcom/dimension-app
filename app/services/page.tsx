@@ -1,13 +1,5 @@
 import BookingButton from "@/components/BookingButton";
-
-const services = [
-  { id: "01", name: "Beard Shave/Trim", duration: "30 min" },
-  { id: "02", name: "Haircut", duration: "45 min" },
-  { id: "03", name: "Haircut + Beard", duration: "1 hr" },
-  { id: "04", name: "Full Scissor Haircut", duration: "1 hr" },
-  { id: "05", name: "Full Scissor Haircut and Beard", duration: "1 hr" },
-  { id: "06", name: "Full Set", duration: "1 hr" },
-];
+import { SERVICES } from "@/lib/site-config";
 
 export default function ServicesPage() {
   return (
@@ -99,7 +91,7 @@ export default function ServicesPage() {
             background: "rgba(245,237,220,0.06)",
           }}
         >
-          {services.map((s) => (
+          {SERVICES.map((s) => (
             <div
               key={s.id}
               className="service-card"
