@@ -347,7 +347,7 @@ export default function AboutPage() {
       {/* ── CTA ─────────────────────────────────────────── */}
       <section
         style={{
-          borderTop: "1px solid rgba(245,237,220,0.06)",
+          backgroundColor: "#F5EDDC",
           padding: "100px 48px",
           textAlign: "center",
         }}
@@ -358,12 +358,18 @@ export default function AboutPage() {
             fontWeight: 800,
             textTransform: "uppercase",
             letterSpacing: "-0.02em",
+            color: "#0a0a0a",
             marginBottom: "40px",
           }}
         >
           Come Meet the Team.
         </h2>
-        <BookingButton className="btn-glass">Book Now</BookingButton>
+        <BookingButton
+          className="btn-glass-accent"
+          style={{ backgroundColor: "#0a0a0a", borderColor: "#0a0a0a", color: "#F5EDDC" }}
+        >
+          Book Now
+        </BookingButton>
       </section>
     </>
   );

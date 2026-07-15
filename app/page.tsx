@@ -316,7 +316,7 @@ export default function Home() {
         id="book"
         style={{
           padding: "120px 48px",
-          borderTop: "1px solid rgba(245,237,220,0.06)",
+          backgroundColor: "#F5EDDC",
           textAlign: "center",
         }}
       >
@@ -326,7 +326,7 @@ export default function Home() {
             fontWeight: 400,
             letterSpacing: "0.22em",
             textTransform: "uppercase",
-            color: "rgba(245,237,220,0.35)",
+            color: "rgba(10,10,10,0.45)",
             display: "block",
             marginBottom: "28px",
           }}
@@ -340,12 +340,22 @@ export default function Home() {
             lineHeight: "1",
             letterSpacing: "-0.03em",
             textTransform: "uppercase",
+            color: "#0a0a0a",
             marginBottom: "48px",
           }}
         >
           Book Your Seat.
         </h2>
-        <BookingButton className="btn-glass" style={{ fontSize: "12px", padding: "18px 48px" }}>
+        <BookingButton
+          className="btn-glass-accent"
+          style={{
+            fontSize: "12px",
+            padding: "18px 48px",
+            backgroundColor: "#0a0a0a",
+            borderColor: "#0a0a0a",
+            color: "#F5EDDC",
+          }}
+        >
           Book Now
         </BookingButton>
       </section>

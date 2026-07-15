@@ -1,78 +1,12 @@
 import BookingButton from "@/components/BookingButton";
 
 const services = [
-  {
-    id: "01",
-    name: "The Signature Cut",
-    description: "Our flagship service. Precision scissor or clipper cut tailored to your face shape, lifestyle, and personal aesthetic.",
-    duration: "45 min",
-    price: "$55",
-    tag: "Most Popular",
-  },
-  {
-    id: "02",
-    name: "The Fade",
-    description: "Skin to length — seamless gradient fades, high fades, low fades, mid fades. Executed without compromise.",
-    duration: "40 min",
-    price: "$50",
-    tag: null,
-  },
-  {
-    id: "03",
-    name: "The Lineup",
-    description: "Razor-sharp edges, crisp temples and neckline. The finishing touch that defines everything.",
-    duration: "20 min",
-    price: "$25",
-    tag: null,
-  },
-  {
-    id: "04",
-    name: "Beard Sculpt",
-    description: "Full beard shaping, detailing, and conditioning. Defined lines, clean edges, intentional shape.",
-    duration: "30 min",
-    price: "$35",
-    tag: null,
-  },
-  {
-    id: "05",
-    name: "Hot Towel Shave",
-    description: "The ritual. Steam, lather, single-pass straight razor shave. Skin care included.",
-    duration: "45 min",
-    price: "$60",
-    tag: "Experience",
-  },
-  {
-    id: "06",
-    name: "Cut & Beard",
-    description: "Full service — signature cut paired with beard sculpting. The complete transformation.",
-    duration: "75 min",
-    price: "$80",
-    tag: "Best Value",
-  },
-  {
-    id: "07",
-    name: "Kids Cut",
-    description: "Patient, skilled cuts for the next generation. Ages 12 and under.",
-    duration: "30 min",
-    price: "$35",
-    tag: null,
-  },
-  {
-    id: "08",
-    name: "The Design",
-    description: "Custom hair art and geometric designs. Bring a reference or let us create something original.",
-    duration: "60 min",
-    price: "From $70",
-    tag: "Custom",
-  },
-  {
-    id: "09",
-    name: "Scalp Treatment",
-    description: "Deep conditioning scalp massage and treatment. Restoration from root to tip.",
-    duration: "30 min",
-    price: "$40",
-    tag: null,
-  },
+  { id: "01", name: "Beard Shave/Trim", duration: "30 min" },
+  { id: "02", name: "Haircut", duration: "45 min" },
+  { id: "03", name: "Haircut + Beard", duration: "1 hr" },
+  { id: "04", name: "Full Scissor Haircut", duration: "1 hr" },
+  { id: "05", name: "Full Scissor Haircut and Beard", duration: "1 hr" },
+  { id: "06", name: "Full Set", duration: "1 hr" },
 ];
 
 export default function ServicesPage() {
@@ -171,26 +105,6 @@ export default function ServicesPage() {
               className="service-card"
               style={{ padding: "48px 36px", position: "relative" }}
             >
-              {/* Tag */}
-              {s.tag && (
-                <span
-                  style={{
-                    position: "absolute",
-                    top: "24px",
-                    right: "24px",
-                    fontSize: "9px",
-                    fontWeight: 500,
-                    letterSpacing: "0.18em",
-                    textTransform: "uppercase",
-                    color: "#B2260E",
-                    border: "1px solid rgba(178,38,14,0.35)",
-                    padding: "4px 10px",
-                  }}
-                >
-                  {s.tag}
-                </span>
-              )}
-
               {/* Number */}
               <span
                 style={{
@@ -212,53 +126,27 @@ export default function ServicesPage() {
                   fontSize: "20px",
                   fontWeight: 700,
                   letterSpacing: "-0.01em",
-                  marginBottom: "16px",
+                  marginBottom: "28px",
                   lineHeight: "1.2",
                 }}
               >
                 {s.name}
               </h3>
 
-              {/* Description */}
-              <p
-                style={{
-                  fontSize: "13px",
-                  fontWeight: 300,
-                  lineHeight: "1.7",
-                  color: "rgba(245,237,220,0.45)",
-                  marginBottom: "36px",
-                }}
-              >
-                {s.description}
-              </p>
-
-              {/* Price + duration */}
+              {/* Duration */}
               <div
                 style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
                   borderTop: "1px solid rgba(245,237,220,0.07)",
                   paddingTop: "20px",
                 }}
               >
                 <span
                   style={{
-                    fontSize: "22px",
-                    fontWeight: 700,
-                    letterSpacing: "-0.01em",
-                    color: "#F5EDDC",
-                  }}
-                >
-                  {s.price}
-                </span>
-                <span
-                  style={{
                     fontSize: "11px",
                     fontWeight: 400,
                     letterSpacing: "0.14em",
                     textTransform: "uppercase",
-                    color: "rgba(245,237,220,0.28)",
+                    color: "rgba(245,237,220,0.4)",
                   }}
                 >
                   {s.duration}
@@ -272,7 +160,7 @@ export default function ServicesPage() {
       {/* ── CTA ─────────────────────────────────────────── */}
       <section
         style={{
-          borderTop: "1px solid rgba(245,237,220,0.06)",
+          backgroundColor: "#F5EDDC",
           padding: "100px 48px",
           textAlign: "center",
         }}
@@ -283,7 +171,7 @@ export default function ServicesPage() {
             fontWeight: 400,
             letterSpacing: "0.22em",
             textTransform: "uppercase",
-            color: "rgba(245,237,220,0.3)",
+            color: "rgba(10,10,10,0.4)",
             marginBottom: "24px",
           }}
         >
@@ -295,12 +183,18 @@ export default function ServicesPage() {
             fontWeight: 800,
             textTransform: "uppercase",
             letterSpacing: "-0.02em",
+            color: "#0a0a0a",
             marginBottom: "40px",
           }}
         >
           Let&apos;s Get to Work.
         </h2>
-        <BookingButton className="btn-glass">Book Now</BookingButton>
+        <BookingButton
+          className="btn-glass-accent"
+          style={{ backgroundColor: "#0a0a0a", borderColor: "#0a0a0a", color: "#F5EDDC" }}
+        >
+          Book Now
+        </BookingButton>
       </section>
     </>
   );
