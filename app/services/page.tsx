@@ -92,37 +92,35 @@ export default function ServicesPage() {
         >
           {SERVICES.map((s) => (
             <div
-              key={s.id}
+              key={s.name}
               className="service-card"
               style={{ padding: "48px 36px", position: "relative" }}
             >
-              {/* Number */}
-              <span
-                style={{
-                  display: "block",
-                  fontSize: "11px",
-                  fontWeight: 400,
-                  letterSpacing: "0.18em",
-                  color: "rgba(245,237,220,0.2)",
-                  marginBottom: "24px",
-                  fontVariantNumeric: "tabular-nums",
-                }}
-              >
-                {s.id}
-              </span>
-
               {/* Name */}
               <h3
                 style={{
                   fontSize: "20px",
                   fontWeight: 700,
                   letterSpacing: "-0.01em",
-                  marginBottom: "28px",
+                  marginBottom: "16px",
                   lineHeight: "1.2",
                 }}
               >
                 {s.name}
               </h3>
+
+              {/* Description */}
+              <p
+                style={{
+                  fontSize: "13px",
+                  fontWeight: 300,
+                  lineHeight: "1.7",
+                  color: "rgba(245,237,220,0.45)",
+                  marginBottom: "28px",
+                }}
+              >
+                {s.description}
+              </p>
 
               {/* Duration */}
               <div

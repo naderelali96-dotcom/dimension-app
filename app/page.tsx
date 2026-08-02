@@ -130,39 +130,6 @@ export default function Home() {
             Where craft meets culture.
           </p>
         </div>
-
-        {/* Scroll hint */}
-        <div
-          style={{
-            position: "absolute",
-            bottom: "40px",
-            right: "48px",
-            zIndex: 2,
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            gap: "10px",
-          }}
-        >
-          <div
-            style={{
-              width: "1px",
-              height: "60px",
-              background: "linear-gradient(to bottom, rgba(245,237,220,0.25), transparent)",
-            }}
-          />
-          <span
-            style={{
-              fontSize: "10px",
-              letterSpacing: "0.22em",
-              textTransform: "uppercase",
-              color: "rgba(245,237,220,0.25)",
-              writingMode: "vertical-rl",
-            }}
-          >
-            Scroll
-          </span>
-        </div>
       </section>
 
       {/* ── INTRO SECTION ───────────────────────────────── */}
@@ -303,34 +270,32 @@ export default function Home() {
         >
           {SERVICES.map((s) => (
             <div
-              key={s.id}
+              key={s.name}
               className="service-card"
               style={{ padding: "48px 36px" }}
             >
-              <span
-                style={{
-                  display: "block",
-                  fontSize: "11px",
-                  fontWeight: 400,
-                  letterSpacing: "0.18em",
-                  color: "rgba(245,237,220,0.2)",
-                  marginBottom: "24px",
-                  fontVariantNumeric: "tabular-nums",
-                }}
-              >
-                {s.id}
-              </span>
               <h3
                 style={{
                   fontSize: "20px",
                   fontWeight: 700,
                   letterSpacing: "-0.01em",
-                  marginBottom: "28px",
+                  marginBottom: "16px",
                   lineHeight: "1.2",
                 }}
               >
                 {s.name}
               </h3>
+              <p
+                style={{
+                  fontSize: "13px",
+                  fontWeight: 300,
+                  lineHeight: "1.7",
+                  color: "rgba(245,237,220,0.45)",
+                  marginBottom: "28px",
+                }}
+              >
+                {s.description}
+              </p>
               <div
                 style={{
                   borderTop: "1px solid rgba(245,237,220,0.07)",
