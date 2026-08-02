@@ -24,7 +24,7 @@ export default function Footer() {
       <div style={{ display: "flex", gap: "32px" }}>
         <Link href="/" className="nav-link">Home</Link>
         <Link href="/services" className="nav-link">Services</Link>
-        <Link href="/about" className="nav-link">About</Link>
+        <Link href="/about" className="nav-link">Team</Link>
       </div>
 
       <p style={{ fontSize: "11px", color: "rgba(10,10,10,0.4)", letterSpacing: "0.06em" }}>

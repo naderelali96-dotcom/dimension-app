@@ -165,47 +165,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── MARQUEE ─────────────────────────────────────── */}
-      <div
-        style={{
-          borderTop: "1px solid rgba(245,237,220,0.06)",
-          borderBottom: "1px solid rgba(245,237,220,0.06)",
-          padding: "18px 0",
-          overflow: "hidden",
-          whiteSpace: "nowrap",
-        }}
-      >
-        <div
-          style={{
-            display: "inline-flex",
-            gap: "0",
-            animation: "marquee 28s linear infinite",
-          }}
-        >
-          {Array.from({ length: 6 }).map((_, i) => (
-            <span
-              key={i}
-              style={{
-                fontSize: "11px",
-                fontWeight: 400,
-                letterSpacing: "0.22em",
-                textTransform: "uppercase",
-                color: "rgba(245,237,220,0.18)",
-                paddingRight: "64px",
-              }}
-            >
-              Precision Cuts &nbsp;·&nbsp; Fades &nbsp;·&nbsp; Lineups &nbsp;·&nbsp; Beard Grooming &nbsp;·&nbsp; Hot Towel Shave &nbsp;·&nbsp; Dimension Barbershop &nbsp;·&nbsp;
-            </span>
-          ))}
-        </div>
-        <style>{`
-          @keyframes marquee {
-            from { transform: translateX(0); }
-            to { transform: translateX(-50%); }
-          }
-        `}</style>
-      </div>
-
       {/* ── INTRO SECTION ───────────────────────────────── */}
       <section
         style={{

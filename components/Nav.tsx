@@ -43,7 +43,7 @@ export default function Nav() {
           href="/about"
           className={`nav-link${pathname === "/about" ? " active" : ""}`}
         >
-          About
+          Team
         </Link>
       </nav>
 

@@ -2,17 +2,17 @@ const barbers = [
   {
     initials: "N",
     name: "Nader",
-    bio: "Nader loves a good conversation as much as a clean line — deeply attentive to detail, chair-side and beyond.",
+    bio: "Nader loves a good conversation just as much as a clean line. He pays close attention to every detail, from the first consultation to the final trim, so you leave looking exactly how you pictured it.",
   },
   {
     initials: "T",
     name: "Tony",
-    bio: "Tony brings humor and precision to every chair. His consultations are as sharp as his cuts.",
+    bio: "Tony keeps things light and easygoing while staying precise with every cut. He listens closely during consultations and always delivers exactly what you asked for.",
   },
   {
     initials: "R",
     name: "Ralph",
-    bio: "Ralph pairs a sharp eye for detail with easy conversation — the kind of chair time that flies by.",
+    bio: "Ralph has a sharp eye for detail and an easy way with conversation. He takes his time with every cut and makes sure nothing gets overlooked.",
   },
 ];
 
