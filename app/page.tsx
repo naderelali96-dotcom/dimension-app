@@ -1,5 +1,4 @@
 import Link from "next/link";
-import BookingButton from "@/components/BookingButton";
 import { SERVICES } from "@/lib/site-config";
 
 export default function Home() {
@@ -130,14 +129,6 @@ export default function Home() {
             <br />
             Where craft meets culture.
           </p>
-
-          {/* CTA */}
-          <div
-            className="fade-up fade-up-delay-4"
-            style={{ display: "flex", justifyContent: "center", gap: "16px", flexWrap: "wrap" }}
-          >
-            <BookingButton className="btn-glass">Book Now</BookingButton>
-          </div>
         </div>
 
         {/* Scroll hint */}
@@ -401,10 +392,6 @@ export default function Home() {
               </div>
             </div>
           ))}
-        </div>
-
-        <div style={{ textAlign: "center", marginTop: "56px" }}>
-          <BookingButton className="btn-glass">Book Now</BookingButton>
         </div>
       </section>
     </>

@@ -1,26 +1,18 @@
-import BookingButton from "@/components/BookingButton";
-
 const barbers = [
   {
-    initials: "NE",
-    name: "Nader E.",
-    title: "Founder & Head Barber",
-    bio: "Nader built Dimension from a single station into a shop defined by precision and standards that never bend. Every cut carries his signature — clean lines and intentional shape.",
-    specialties: ["Scissor Work", "Fades", "Beard Sculpting"],
+    initials: "N",
+    name: "Nader",
+    bio: "Nader loves a good conversation as much as a clean line — deeply attentive to detail, chair-side and beyond.",
   },
   {
-    initials: "TP",
-    name: "Tony P.",
-    title: "Senior Barber",
-    bio: "Tony brings speed and precision in equal measure. Years behind the chair have sharpened his eye for symmetry and his instinct for exactly what a client is asking for.",
-    specialties: ["High Fades", "Lineups", "Classic Cuts"],
+    initials: "T",
+    name: "Tony",
+    bio: "Tony brings humor and precision to every chair. His consultations are as sharp as his cuts.",
   },
   {
-    initials: "JC",
-    name: "Jason C.",
-    title: "Apprentice Barber",
-    bio: "Jason is training under Dimension's senior barbers, building his craft one cut at a time. Patient, detail-obsessed, and hungry to earn his own chair.",
-    specialties: ["Fades", "Lineups", "Kids Cuts"],
+    initials: "R",
+    name: "Ralph",
+    bio: "Ralph pairs a sharp eye for detail with easy conversation — the kind of chair time that flies by.",
   },
 ];
 
@@ -283,29 +275,17 @@ export default function AboutPage() {
                 </span>
               </div>
 
-              {/* Name + title */}
+              {/* Name */}
               <h3
                 style={{
                   fontSize: "22px",
                   fontWeight: 700,
                   letterSpacing: "-0.01em",
-                  marginBottom: "6px",
+                  marginBottom: "16px",
                 }}
               >
                 {b.name}
               </h3>
-              <p
-                style={{
-                  fontSize: "11px",
-                  fontWeight: 400,
-                  letterSpacing: "0.16em",
-                  textTransform: "uppercase",
-                  color: "#B2260E",
-                  marginBottom: "24px",
-                }}
-              >
-                {b.title}
-              </p>
 
               {/* Bio */}
               <p
@@ -314,62 +294,13 @@ export default function AboutPage() {
                   fontWeight: 300,
                   lineHeight: "1.8",
                   color: "rgba(245,237,220,0.45)",
-                  marginBottom: "28px",
                 }}
               >
                 {b.bio}
               </p>
-
-              {/* Specialties */}
-              <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
-                {b.specialties.map((s) => (
-                  <span
-                    key={s}
-                    style={{
-                      fontSize: "10px",
-                      fontWeight: 400,
-                      letterSpacing: "0.14em",
-                      textTransform: "uppercase",
-                      color: "rgba(245,237,220,0.35)",
-                      border: "1px solid rgba(245,237,220,0.1)",
-                      padding: "5px 12px",
-                    }}
-                  >
-                    {s}
-                  </span>
-                ))}
-              </div>
             </div>
           ))}
         </div>
-      </section>
-
-      {/* ── CTA ─────────────────────────────────────────── */}
-      <section
-        style={{
-          backgroundColor: "#F5EDDC",
-          padding: "100px 48px",
-          textAlign: "center",
-        }}
-      >
-        <h2
-          style={{
-            fontSize: "clamp(32px, 4vw, 52px)",
-            fontWeight: 800,
-            textTransform: "uppercase",
-            letterSpacing: "-0.02em",
-            color: "#0a0a0a",
-            marginBottom: "40px",
-          }}
-        >
-          Come Meet the Team.
-        </h2>
-        <BookingButton
-          className="btn-glass-accent"
-          style={{ backgroundColor: "#0a0a0a", borderColor: "#0a0a0a", color: "#F5EDDC" }}
-        >
-          Book Now
-        </BookingButton>
       </section>
     </>
   );

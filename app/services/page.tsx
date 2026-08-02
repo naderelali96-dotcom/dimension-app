@@ -1,4 +1,3 @@
-import BookingButton from "@/components/BookingButton";
 import { SERVICES } from "@/lib/site-config";
 
 export default function ServicesPage() {
@@ -147,46 +146,6 @@ export default function ServicesPage() {
             </div>
           ))}
         </div>
-      </section>
-
-      {/* ── CTA ─────────────────────────────────────────── */}
-      <section
-        style={{
-          backgroundColor: "#F5EDDC",
-          padding: "100px 48px",
-          textAlign: "center",
-        }}
-      >
-        <p
-          style={{
-            fontSize: "11px",
-            fontWeight: 400,
-            letterSpacing: "0.22em",
-            textTransform: "uppercase",
-            color: "rgba(10,10,10,0.4)",
-            marginBottom: "24px",
-          }}
-        >
-          Ready to sit down?
-        </p>
-        <h2
-          style={{
-            fontSize: "clamp(32px, 4vw, 52px)",
-            fontWeight: 800,
-            textTransform: "uppercase",
-            letterSpacing: "-0.02em",
-            color: "#0a0a0a",
-            marginBottom: "40px",
-          }}
-        >
-          Let&apos;s Get to Work.
-        </h2>
-        <BookingButton
-          className="btn-glass-accent"
-          style={{ backgroundColor: "#0a0a0a", borderColor: "#0a0a0a", color: "#F5EDDC" }}
-        >
-          Book Now
-        </BookingButton>
       </section>
     </>
   );
