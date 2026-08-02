@@ -26,7 +26,7 @@ export default function AboutPage() {
           paddingBottom: "80px",
           paddingLeft: "48px",
           paddingRight: "48px",
-          borderBottom: "1px solid rgba(245,237,220,0.06)",
+          borderBottom: "1px solid rgba(10,10,10,0.06)",
         }}
       >
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
@@ -45,7 +45,7 @@ export default function AboutPage() {
                 fontWeight: 400,
                 letterSpacing: "0.22em",
                 textTransform: "uppercase",
-                color: "rgba(245,237,220,0.4)",
+                color: "rgba(10,10,10,0.4)",
               }}
             >
               Who We Are
@@ -92,7 +92,7 @@ export default function AboutPage() {
           >
             Built on
             <br />
-            <span style={{ color: "rgba(245,237,220,0.2)" }}>a single</span>
+            <span style={{ color: "rgba(10,10,10,0.2)" }}>a single</span>
             <br />
             belief.
           </h2>
@@ -105,7 +105,7 @@ export default function AboutPage() {
               fontSize: "15px",
               fontWeight: 300,
               lineHeight: "1.9",
-              color: "rgba(245,237,220,0.55)",
+              color: "rgba(10,10,10,0.55)",
               marginBottom: "28px",
             }}
           >
@@ -119,7 +119,7 @@ export default function AboutPage() {
               fontSize: "15px",
               fontWeight: 300,
               lineHeight: "1.9",
-              color: "rgba(245,237,220,0.55)",
+              color: "rgba(10,10,10,0.55)",
               marginBottom: "28px",
             }}
           >
@@ -132,7 +132,7 @@ export default function AboutPage() {
               fontSize: "15px",
               fontWeight: 300,
               lineHeight: "1.9",
-              color: "rgba(245,237,220,0.55)",
+              color: "rgba(10,10,10,0.55)",
             }}
           >
             Dimension is more than a name. It&apos;s a reminder that craft
@@ -145,8 +145,8 @@ export default function AboutPage() {
       {/* ── DIVIDER + VALUES ────────────────────────────── */}
       <section
         style={{
-          borderTop: "1px solid rgba(245,237,220,0.06)",
-          borderBottom: "1px solid rgba(245,237,220,0.06)",
+          borderTop: "1px solid rgba(10,10,10,0.06)",
+          borderBottom: "1px solid rgba(10,10,10,0.06)",
           padding: "80px 48px",
         }}
       >
@@ -157,7 +157,7 @@ export default function AboutPage() {
             display: "grid",
             gridTemplateColumns: "repeat(3, 1fr)",
             gap: "1px",
-            background: "rgba(245,237,220,0.06)",
+            background: "rgba(10,10,10,0.06)",
           }}
         >
           {[
@@ -174,7 +174,7 @@ export default function AboutPage() {
               body: "Barbering is a discipline. We treat it as one — studying technique, investing in tools, and never stopping the pursuit.",
             },
           ].map(({ title, body }) => (
-            <div key={title} style={{ padding: "56px 40px", background: "#0a0a0a" }}>
+            <div key={title} style={{ padding: "56px 40px", background: "#F0EEE9" }}>
               <span className="line-accent" style={{ marginBottom: "24px" }} />
               <h3
                 style={{
@@ -193,7 +193,7 @@ export default function AboutPage() {
                   fontSize: "13px",
                   fontWeight: 300,
                   lineHeight: "1.8",
-                  color: "rgba(245,237,220,0.45)",
+                  color: "rgba(10,10,10,0.45)",
                 }}
               >
                 {body}
@@ -226,7 +226,7 @@ export default function AboutPage() {
               fontWeight: 400,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "rgba(245,237,220,0.4)",
+              color: "rgba(10,10,10,0.4)",
             }}
           >
             The Team
@@ -238,7 +238,7 @@ export default function AboutPage() {
             display: "grid",
             gridTemplateColumns: "repeat(3, 1fr)",
             gap: "1px",
-            background: "rgba(245,237,220,0.06)",
+            background: "rgba(10,10,10,0.06)",
           }}
         >
           {barbers.map((b) => (
@@ -246,7 +246,7 @@ export default function AboutPage() {
               key={b.name}
               style={{
                 padding: "56px 48px",
-                background: "#0a0a0a",
+                background: "#F0EEE9",
                 transition: "background 0.3s ease",
               }}
               className="service-card"
@@ -256,7 +256,7 @@ export default function AboutPage() {
                 style={{
                   width: "64px",
                   height: "64px",
-                  border: "1px solid rgba(245,237,220,0.12)",
+                  border: "1px solid rgba(10,10,10,0.12)",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
@@ -268,7 +268,7 @@ export default function AboutPage() {
                     fontSize: "16px",
                     fontWeight: 700,
                     letterSpacing: "0.06em",
-                    color: "rgba(245,237,220,0.7)",
+                    color: "rgba(10,10,10,0.7)",
                   }}
                 >
                   {b.initials}
@@ -293,7 +293,7 @@ export default function AboutPage() {
                   fontSize: "13px",
                   fontWeight: 300,
                   lineHeight: "1.8",
-                  color: "rgba(245,237,220,0.45)",
+                  color: "rgba(10,10,10,0.45)",
                 }}
               >
                 {b.bio}

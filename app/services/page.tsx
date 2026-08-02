@@ -10,7 +10,7 @@ export default function ServicesPage() {
           paddingBottom: "80px",
           paddingLeft: "48px",
           paddingRight: "48px",
-          borderBottom: "1px solid rgba(245,237,220,0.06)",
+          borderBottom: "1px solid rgba(10,10,10,0.06)",
         }}
       >
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
@@ -29,7 +29,7 @@ export default function ServicesPage() {
                 fontWeight: 400,
                 letterSpacing: "0.22em",
                 textTransform: "uppercase",
-                color: "rgba(245,237,220,0.4)",
+                color: "rgba(10,10,10,0.4)",
               }}
             >
               What We Do
@@ -61,7 +61,7 @@ export default function ServicesPage() {
                 fontSize: "14px",
                 fontWeight: 300,
                 lineHeight: "1.7",
-                color: "rgba(245,237,220,0.4)",
+                color: "rgba(10,10,10,0.4)",
                 maxWidth: "340px",
                 textAlign: "right",
               }}
@@ -87,7 +87,7 @@ export default function ServicesPage() {
             display: "grid",
             gridTemplateColumns: "repeat(3, 1fr)",
             gap: "1px",
-            background: "rgba(245,237,220,0.06)",
+            background: "rgba(10,10,10,0.06)",
           }}
         >
           {SERVICES.map((s) => (
@@ -115,7 +115,7 @@ export default function ServicesPage() {
                   fontSize: "13px",
                   fontWeight: 300,
                   lineHeight: "1.7",
-                  color: "rgba(245,237,220,0.45)",
+                  color: "rgba(10,10,10,0.45)",
                   marginBottom: "28px",
                 }}
               >
@@ -125,7 +125,7 @@ export default function ServicesPage() {
               {/* Duration */}
               <div
                 style={{
-                  borderTop: "1px solid rgba(245,237,220,0.07)",
+                  borderTop: "1px solid rgba(10,10,10,0.07)",
                   paddingTop: "20px",
                 }}
               >
@@ -135,7 +135,7 @@ export default function ServicesPage() {
                     fontWeight: 400,
                     letterSpacing: "0.14em",
                     textTransform: "uppercase",
-                    color: "rgba(245,237,220,0.4)",
+                    color: "rgba(10,10,10,0.4)",
                   }}
                 >
                   {s.duration}

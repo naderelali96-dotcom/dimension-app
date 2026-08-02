@@ -19,7 +19,7 @@ export default function Nav() {
         display: "grid",
         gridTemplateColumns: "1fr auto 1fr",
         alignItems: "center",
-        backgroundColor: "#F5EDDC",
+        backgroundColor: "#F0EEE9",
         backdropFilter: "blur(16px)",
         WebkitBackdropFilter: "blur(16px)",
         borderBottom: "1px solid rgba(10,10,10,0.08)",

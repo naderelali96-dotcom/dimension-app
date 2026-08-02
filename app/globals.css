@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #0a0a0a;
+  --bg: #F0EEE9;
   --accent: #B2260E;
 }
 
@@ -16,8 +16,8 @@ html {
 }
 
 body {
-  background-color: #0a0a0a;
-  color: #F5EDDC;
+  background-color: #F0EEE9;
+  color: #0a0a0a;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
@@ -29,9 +29,9 @@ body {
   align-items: center;
   justify-content: center;
   padding: 20px 52px;
-  background: rgba(245, 237, 220, 0.04);
-  border: 1px solid rgba(245, 237, 220, 0.18);
-  color: #F5EDDC;
+  background: rgba(10, 10, 10, 0.04);
+  border: 1px solid rgba(10, 10, 10, 0.18);
+  color: #0a0a0a;
   font-size: 13px;
   font-weight: 500;
   letter-spacing: 0.18em;
@@ -45,8 +45,8 @@ body {
 }
 
 .btn-glass:hover {
-  background: rgba(245, 237, 220, 0.14);
-  border-color: rgba(245, 237, 220, 0.45);
+  background: rgba(10, 10, 10, 0.08);
+  border-color: rgba(10, 10, 10, 0.35);
 }
 
 .btn-glass-accent {
@@ -54,9 +54,9 @@ body {
   align-items: center;
   justify-content: center;
   padding: 20px 52px;
-  background: #F5EDDC;
-  border: 1px solid #F5EDDC;
-  color: #0a0a0a;
+  background: #0a0a0a;
+  border: 1px solid #0a0a0a;
+  color: #F0EEE9;
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.18em;
@@ -67,21 +67,9 @@ body {
 }
 
 .btn-glass-accent:hover {
-  background: rgba(245, 237, 220, 0.85);
-  border-color: rgba(245, 237, 220, 0.85);
-  transform: scale(1.03);
-}
-
-/* Book CTA sits on the cream nav bar, so invert to a dark solid button */
-header .btn-glass-accent {
-  background: #0a0a0a;
-  border-color: #0a0a0a;
-  color: #F5EDDC;
-}
-
-header .btn-glass-accent:hover {
   background: rgba(10, 10, 10, 0.82);
   border-color: rgba(10, 10, 10, 0.82);
+  transform: scale(1.03);
 }
 
 /* Fade-in animation */
@@ -107,13 +95,13 @@ header .btn-glass-accent:hover {
 
 /* Custom scrollbar */
 ::-webkit-scrollbar { width: 3px; }
-::-webkit-scrollbar-track { background: #0a0a0a; }
+::-webkit-scrollbar-track { background: #F0EEE9; }
 ::-webkit-scrollbar-thumb { background: #222; }
 ::-webkit-scrollbar-thumb:hover { background: #B2260E; }
 
 ::selection {
   background: rgba(178, 38, 14, 0.28);
-  color: #F5EDDC;
+  color: #0a0a0a;
 }
 
 /* Nav link */
@@ -122,40 +110,20 @@ header .btn-glass-accent:hover {
   font-weight: 400;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: rgba(245, 237, 220, 0.55);
+  color: rgba(10, 10, 10, 0.55);
   text-decoration: none;
   transition: color 0.25s ease;
 }
 
 .nav-link:hover,
 .nav-link.active {
-  color: #F5EDDC;
-}
-
-/* Nav sits on a cream bar, so its links need a dark palette instead */
-header .nav-link {
-  color: rgba(10, 10, 10, 0.55);
-}
-
-header .nav-link:hover,
-header .nav-link.active {
-  color: #0a0a0a;
-}
-
-/* Footer sits on the same cream bar as the nav */
-footer .nav-link {
-  color: rgba(10, 10, 10, 0.55);
-}
-
-footer .nav-link:hover,
-footer .nav-link.active {
   color: #0a0a0a;
 }
 
 /* Service card */
 .service-card {
-  border: 1px solid rgba(245, 237, 220, 0.07);
-  background: rgba(245, 237, 220, 0.02);
+  border: 1px solid rgba(10, 10, 10, 0.08);
+  background: rgba(10, 10, 10, 0.02);
   transition: border-color 0.3s ease, background 0.3s ease;
   cursor: default;
 }

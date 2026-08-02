@@ -166,7 +166,7 @@ export default function Home() {
               fontSize: "15px",
               fontWeight: 300,
               lineHeight: "1.8",
-              color: "rgba(245,237,220,0.5)",
+              color: "rgba(10,10,10,0.55)",
               marginBottom: "40px",
             }}
           >
@@ -185,8 +185,8 @@ export default function Home() {
             display: "grid",
             gridTemplateColumns: "1fr 1fr",
             gap: "1px",
-            background: "rgba(245,237,220,0.06)",
-            border: "1px solid rgba(245,237,220,0.06)",
+            background: "rgba(10,10,10,0.08)",
+            border: "1px solid rgba(10,10,10,0.08)",
           }}
         >
           {[
@@ -199,7 +199,7 @@ export default function Home() {
               key={label}
               style={{
                 padding: "48px 36px",
-                background: "#0a0a0a",
+                background: "#F0EEE9",
               }}
             >
               <div
@@ -207,7 +207,7 @@ export default function Home() {
                   fontSize: "clamp(32px, 3vw, 44px)",
                   fontWeight: 800,
                   letterSpacing: "-0.02em",
-                  color: "#F5EDDC",
+                  color: "#0a0a0a",
                   marginBottom: "8px",
                 }}
               >
@@ -219,7 +219,7 @@ export default function Home() {
                   fontWeight: 400,
                   letterSpacing: "0.14em",
                   textTransform: "uppercase",
-                  color: "rgba(245,237,220,0.35)",
+                  color: "rgba(10,10,10,0.45)",
                 }}
               >
                 {label}
@@ -252,7 +252,7 @@ export default function Home() {
               fontWeight: 400,
               letterSpacing: "0.22em",
               textTransform: "uppercase",
-              color: "rgba(245,237,220,0.4)",
+              color: "rgba(10,10,10,0.45)",
             }}
           >
             What We Do
@@ -264,8 +264,8 @@ export default function Home() {
             display: "grid",
             gridTemplateColumns: "repeat(3, 1fr)",
             gap: "1px",
-            background: "rgba(245,237,220,0.06)",
-            border: "1px solid rgba(245,237,220,0.06)",
+            background: "rgba(10,10,10,0.08)",
+            border: "1px solid rgba(10,10,10,0.08)",
           }}
         >
           {SERVICES.map((s) => (
@@ -290,7 +290,7 @@ export default function Home() {
                   fontSize: "13px",
                   fontWeight: 300,
                   lineHeight: "1.7",
-                  color: "rgba(245,237,220,0.45)",
+                  color: "rgba(10,10,10,0.5)",
                   marginBottom: "28px",
                 }}
               >
@@ -298,7 +298,7 @@ export default function Home() {
               </p>
               <div
                 style={{
-                  borderTop: "1px solid rgba(245,237,220,0.07)",
+                  borderTop: "1px solid rgba(10,10,10,0.08)",
                   paddingTop: "20px",
                 }}
               >
@@ -308,7 +308,7 @@ export default function Home() {
                     fontWeight: 400,
                     letterSpacing: "0.14em",
                     textTransform: "uppercase",
-                    color: "rgba(245,237,220,0.4)",
+                    color: "rgba(10,10,10,0.45)",
                   }}
                 >
                   {s.duration}
