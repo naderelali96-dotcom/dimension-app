@@ -1,5 +1,5 @@
-export const BOOKING_URL =
-  "https://getsquire.com/booking/book/dimension-barbershop-montreal";
+export const SQUIRE_BRAND_ID = "859b7015-98ee-469c-919a-f0649fec78fa";
+export const SQUIRE_SHOP_ROUTE = "dimension-barbershop-montreal";
 
 export const SERVICES = [
   { id: "01", name: "Beard Shave/Trim", duration: "30 min" },
