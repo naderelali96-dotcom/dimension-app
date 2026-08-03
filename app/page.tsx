@@ -69,31 +69,6 @@ export default function Home() {
         />
 
         <div style={{ maxWidth: "900px", position: "relative", zIndex: 2 }}>
-          {/* Pre-label */}
-          <div
-            className="fade-up fade-up-delay-1"
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              gap: "16px",
-              marginBottom: "40px",
-            }}
-          >
-            <span className="line-accent" />
-            <span
-              style={{
-                fontSize: "11px",
-                fontWeight: 400,
-                letterSpacing: "0.22em",
-                textTransform: "uppercase",
-                color: "rgba(245,237,220,0.45)",
-              }}
-            >
-              Premium Barbershop · Est. 2020
-            </span>
-          </div>
-
           {/* Headline */}
           <h1
             className="fade-up fade-up-delay-2"
@@ -291,29 +266,10 @@ export default function Home() {
                   fontWeight: 300,
                   lineHeight: "1.7",
                   color: "rgba(10,10,10,0.5)",
-                  marginBottom: "28px",
                 }}
               >
                 {s.description}
               </p>
-              <div
-                style={{
-                  borderTop: "1px solid rgba(10,10,10,0.08)",
-                  paddingTop: "20px",
-                }}
-              >
-                <span
-                  style={{
-                    fontSize: "11px",
-                    fontWeight: 400,
-                    letterSpacing: "0.14em",
-                    textTransform: "uppercase",
-                    color: "rgba(10,10,10,0.45)",
-                  }}
-                >
-                  {s.duration}
-                </span>
-              </div>
             </div>
           ))}
         </div>

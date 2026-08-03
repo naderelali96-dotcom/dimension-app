@@ -4,32 +4,26 @@ export const SQUIRE_SHOP_ROUTE = "dimension-barbershop-montreal";
 export const SERVICES = [
   {
     name: "Beard Shave/Trim",
-    duration: "30 min",
-    description: "A clean shave or trim to keep your beard sharp and shaped.",
+    description: "Includes a beard fade, precise line up and trim, finished off with a hot towel.",
   },
   {
     name: "Haircut",
-    duration: "45 min",
-    description: "A precision haircut tailored to your style.",
+    description: "Clipper cut, fade, and use of scissors. Styled to finish.",
   },
   {
     name: "Haircut + Beard",
-    duration: "1 hr",
-    description: "A full haircut paired with a beard trim for a complete look.",
+    description: "Clipper cut, fade, and use of scissors, plus a beard fade, line up and trim.",
   },
   {
     name: "Full Scissor Haircut",
-    duration: "1 hr",
-    description: "A detailed scissor cut, finished with a hairwash.",
+    description: "Haircut done fully with scissors. Includes a hair wash and styling.",
   },
   {
     name: "Full Scissor Haircut and Beard",
-    duration: "1 hr",
-    description: "A scissor cut and beard trim, finished with a hairwash.",
+    description: "Haircut done fully with scissors, plus a beard trim and line up. Includes a hair wash and styling.",
   },
   {
     name: "Full Set",
-    duration: "1 hr",
-    description: "The complete package: haircut, beard, and a hairwash.",
+    description: "Haircut and beard trim/line up, hot towel shave, and hair wash.",
   },
 ];

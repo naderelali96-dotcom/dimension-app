@@ -116,31 +116,10 @@ export default function ServicesPage() {
                   fontWeight: 300,
                   lineHeight: "1.7",
                   color: "rgba(10,10,10,0.45)",
-                  marginBottom: "28px",
                 }}
               >
                 {s.description}
               </p>
-
-              {/* Duration */}
-              <div
-                style={{
-                  borderTop: "1px solid rgba(10,10,10,0.07)",
-                  paddingTop: "20px",
-                }}
-              >
-                <span
-                  style={{
-                    fontSize: "11px",
-                    fontWeight: 400,
-                    letterSpacing: "0.14em",
-                    textTransform: "uppercase",
-                    color: "rgba(10,10,10,0.4)",
-                  }}
-                >
-                  {s.duration}
-                </span>
-              </div>
             </div>
           ))}
         </div>
