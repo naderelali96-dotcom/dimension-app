@@ -1,16 +1,16 @@
 const barbers = [
   {
-    initials: "N",
+    photo: "/team/nader.jpg",
     name: "Nader",
     bio: "Nader loves a good conversation just as much as a clean line. He pays close attention to every detail, from the first consultation to the final trim, so you leave looking exactly how you pictured it.",
   },
   {
-    initials: "T",
+    photo: "/team/tony.jpg",
     name: "Tony",
     bio: "Tony keeps things light and easygoing while staying precise with every cut. He listens closely during consultations and always delivers exactly what you asked for.",
   },
   {
-    initials: "R",
+    photo: "/team/ralph.jpg",
     name: "Ralph",
     bio: "Ralph has a sharp eye for detail and an easy way with conversation. He takes his time with every cut and makes sure nothing gets overlooked.",
   },
@@ -245,59 +245,49 @@ export default function AboutPage() {
             <div
               key={b.name}
               style={{
-                padding: "56px 48px",
                 background: "#F0EEE9",
                 transition: "background 0.3s ease",
               }}
               className="service-card"
             >
-              {/* Avatar */}
-              <div
+              {/* Photo */}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={b.photo}
+                alt={b.name}
                 style={{
-                  width: "64px",
-                  height: "64px",
-                  border: "1px solid rgba(10,10,10,0.12)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  marginBottom: "28px",
+                  width: "100%",
+                  aspectRatio: "4 / 5",
+                  objectFit: "cover",
+                  display: "block",
                 }}
-              >
-                <span
+              />
+
+              <div style={{ padding: "32px 40px 48px" }}>
+                {/* Name */}
+                <h3
                   style={{
-                    fontSize: "16px",
+                    fontSize: "22px",
                     fontWeight: 700,
-                    letterSpacing: "0.06em",
-                    color: "rgba(10,10,10,0.7)",
+                    letterSpacing: "-0.01em",
+                    marginBottom: "16px",
                   }}
                 >
-                  {b.initials}
-                </span>
+                  {b.name}
+                </h3>
+
+                {/* Bio */}
+                <p
+                  style={{
+                    fontSize: "13px",
+                    fontWeight: 300,
+                    lineHeight: "1.8",
+                    color: "rgba(10,10,10,0.45)",
+                  }}
+                >
+                  {b.bio}
+                </p>
               </div>
-
-              {/* Name */}
-              <h3
-                style={{
-                  fontSize: "22px",
-                  fontWeight: 700,
-                  letterSpacing: "-0.01em",
-                  marginBottom: "16px",
-                }}
-              >
-                {b.name}
-              </h3>
-
-              {/* Bio */}
-              <p
-                style={{
-                  fontSize: "13px",
-                  fontWeight: 300,
-                  lineHeight: "1.8",
-                  color: "rgba(10,10,10,0.45)",
-                }}
-              >
-                {b.bio}
-              </p>
             </div>
           ))}
         </div>
