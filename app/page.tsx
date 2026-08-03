@@ -13,7 +13,7 @@ export default function Home() {
           alignItems: "center",
           justifyContent: "flex-end",
           textAlign: "center",
-          padding: "0 48px",
+          padding: "0 clamp(20px, 6vw, 48px)",
           paddingTop: "120px",
           paddingBottom: "140px",
           position: "relative",
@@ -109,12 +109,11 @@ export default function Home() {
 
       {/* ── INTRO SECTION ───────────────────────────────── */}
       <section
+        className="grid-2"
         style={{
-          padding: "140px 48px",
+          padding: "clamp(80px, 15vw, 140px) clamp(20px, 6vw, 48px)",
           maxWidth: "1200px",
           margin: "0 auto",
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
           gap: "96px",
           alignItems: "center",
         }}
@@ -207,7 +206,7 @@ export default function Home() {
       {/* ── SERVICES ────────────────────────────────────── */}
       <section
         style={{
-          padding: "0 48px 140px",
+          padding: "0 clamp(20px, 6vw, 48px) 140px",
           maxWidth: "1200px",
           margin: "0 auto",
         }}
@@ -235,9 +234,8 @@ export default function Home() {
         </div>
 
         <div
+          className="grid-3"
           style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(3, 1fr)",
             gap: "1px",
             background: "rgba(10,10,10,0.08)",
             border: "1px solid rgba(10,10,10,0.08)",

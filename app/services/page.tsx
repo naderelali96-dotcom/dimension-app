@@ -8,8 +8,8 @@ export default function ServicesPage() {
         style={{
           paddingTop: "160px",
           paddingBottom: "80px",
-          paddingLeft: "48px",
-          paddingRight: "48px",
+          paddingLeft: "clamp(20px, 6vw, 48px)",
+          paddingRight: "clamp(20px, 6vw, 48px)",
           borderBottom: "1px solid rgba(10,10,10,0.06)",
         }}
       >
@@ -77,15 +77,14 @@ export default function ServicesPage() {
       {/* ── SERVICE GRID ────────────────────────────────── */}
       <section
         style={{
-          padding: "80px 48px 120px",
+          padding: "80px clamp(20px, 6vw, 48px) 120px",
           maxWidth: "1200px",
           margin: "0 auto",
         }}
       >
         <div
+          className="grid-3"
           style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(3, 1fr)",
             gap: "1px",
             background: "rgba(10,10,10,0.06)",
           }}

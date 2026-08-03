@@ -26,8 +26,8 @@ export default function AboutPage() {
         style={{
           paddingTop: "160px",
           paddingBottom: "80px",
-          paddingLeft: "48px",
-          paddingRight: "48px",
+          paddingLeft: "clamp(20px, 6vw, 48px)",
+          paddingRight: "clamp(20px, 6vw, 48px)",
           borderBottom: "1px solid rgba(10,10,10,0.06)",
         }}
       >
@@ -70,12 +70,11 @@ export default function AboutPage() {
 
       {/* ── STORY ───────────────────────────────────────── */}
       <section
+        className="grid-2"
         style={{
-          padding: "100px 48px",
+          padding: "100px clamp(20px, 6vw, 48px)",
           maxWidth: "1200px",
           margin: "0 auto",
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
           gap: "96px",
           alignItems: "start",
         }}
@@ -149,15 +148,14 @@ export default function AboutPage() {
         style={{
           borderTop: "1px solid rgba(10,10,10,0.06)",
           borderBottom: "1px solid rgba(10,10,10,0.06)",
-          padding: "80px 48px",
+          padding: "80px clamp(20px, 6vw, 48px)",
         }}
       >
         <div
+          className="grid-3"
           style={{
             maxWidth: "1200px",
             margin: "0 auto",
-            display: "grid",
-            gridTemplateColumns: "repeat(3, 1fr)",
             gap: "1px",
             background: "rgba(10,10,10,0.06)",
           }}
@@ -208,7 +206,7 @@ export default function AboutPage() {
       {/* ── BARBER PROFILES ─────────────────────────────── */}
       <section
         style={{
-          padding: "100px 48px 120px",
+          padding: "100px clamp(20px, 6vw, 48px) 120px",
           maxWidth: "1200px",
           margin: "0 auto",
         }}
@@ -236,9 +234,8 @@ export default function AboutPage() {
         </div>
 
         <div
+          className="grid-3"
           style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(3, 1fr)",
             gap: "1px",
             background: "rgba(10,10,10,0.06)",
           }}
@@ -297,13 +294,12 @@ export default function AboutPage() {
 
       {/* ── VISIT US ────────────────────────────────────── */}
       <section
+        className="grid-2"
         style={{
           borderTop: "1px solid rgba(10,10,10,0.06)",
-          padding: "100px 48px 120px",
+          padding: "100px clamp(20px, 6vw, 48px) 120px",
           maxWidth: "1200px",
           margin: "0 auto",
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
           gap: "96px",
           alignItems: "center",
         }}

@@ -1,13 +1,29 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import BookingButton from "@/components/BookingButton";
 
 export default function Nav() {
   const pathname = usePathname();
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [menuOpen]);
+
+  const links = [
+    { href: "/", label: "Home" },
+    { href: "/services", label: "Services" },
+    { href: "/about", label: "Team" },
+  ];
 
   return (
+    <>
     <header
       style={{
         position: "fixed",
@@ -25,27 +41,32 @@ export default function Nav() {
         borderBottom: "1px solid rgba(10,10,10,0.08)",
       }}
     >
-      {/* Nav links */}
-      <nav style={{ display: "flex", gap: "40px", alignItems: "center", justifySelf: "start" }}>
-        <Link
-          href="/"
-          className={`nav-link${pathname === "/" ? " active" : ""}`}
-        >
-          Home
-        </Link>
-        <Link
-          href="/services"
-          className={`nav-link${pathname === "/services" ? " active" : ""}`}
-        >
-          Services
-        </Link>
-        <Link
-          href="/about"
-          className={`nav-link${pathname === "/about" ? " active" : ""}`}
-        >
-          Team
-        </Link>
+      {/* Nav links (desktop) */}
+      <nav className="nav-desktop-links" style={{ justifySelf: "start" }}>
+        {links.map(({ href, label }) => (
+          <Link
+            key={href}
+            href={href}
+            className={`nav-link${pathname === href ? " active" : ""}`}
+          >
+            {label}
+          </Link>
+        ))}
       </nav>
+
+      {/* Hamburger (mobile) */}
+      <button
+        type="button"
+        aria-label="Toggle menu"
+        aria-expanded={menuOpen}
+        className="nav-hamburger"
+        style={{ justifySelf: "start" }}
+        onClick={() => setMenuOpen((v) => !v)}
+      >
+        <span />
+        <span />
+        <span />
+      </button>
 
       {/* Wordmark */}
       <Link href="/" style={{ display: "flex", alignItems: "center", justifySelf: "center" }}>
@@ -62,5 +83,20 @@ export default function Nav() {
         <BookingButton className="btn-glass-accent">Book Now</BookingButton>
       </div>
     </header>
+
+    {/* Mobile menu */}
+    <div className={`mobile-menu${menuOpen ? " open" : ""}`}>
+      {links.map(({ href, label }) => (
+        <Link
+          key={href}
+          href={href}
+          className={`nav-link${pathname === href ? " active" : ""}`}
+          onClick={() => setMenuOpen(false)}
+        >
+          {label}
+        </Link>
+      ))}
+    </div>
+    </>
   );
 }

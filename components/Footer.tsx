@@ -6,7 +6,7 @@ export default function Footer() {
       style={{
         backgroundColor: "#F0EEE9",
         borderTop: "1px solid rgba(10,10,10,0.08)",
-        padding: "48px",
+        padding: "48px clamp(20px, 6vw, 48px)",
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
