@@ -1,3 +1,5 @@
+import { ADDRESS, MAPS_EMBED_URL, MAPS_DIRECTIONS_URL } from "@/lib/site-config";
+
 const barbers = [
   {
     photo: "/team/nader.jpg",
@@ -290,6 +292,86 @@ export default function AboutPage() {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* ── VISIT US ────────────────────────────────────── */}
+      <section
+        style={{
+          borderTop: "1px solid rgba(10,10,10,0.06)",
+          padding: "100px 48px 120px",
+          maxWidth: "1200px",
+          margin: "0 auto",
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr",
+          gap: "96px",
+          alignItems: "center",
+        }}
+      >
+        <div>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "16px",
+              marginBottom: "28px",
+            }}
+          >
+            <span className="line-accent" />
+            <span
+              style={{
+                fontSize: "11px",
+                fontWeight: 400,
+                letterSpacing: "0.22em",
+                textTransform: "uppercase",
+                color: "rgba(10,10,10,0.4)",
+              }}
+            >
+              Visit Us
+            </span>
+          </div>
+          <h2
+            style={{
+              fontSize: "clamp(32px, 4vw, 48px)",
+              fontWeight: 800,
+              lineHeight: "1.1",
+              letterSpacing: "-0.02em",
+              textTransform: "uppercase",
+              marginBottom: "24px",
+            }}
+          >
+            Come See Us.
+          </h2>
+          <p
+            style={{
+              fontSize: "15px",
+              fontWeight: 300,
+              lineHeight: "1.8",
+              color: "rgba(10,10,10,0.55)",
+              marginBottom: "32px",
+            }}
+          >
+            {ADDRESS}
+          </p>
+          <a
+            href={MAPS_DIRECTIONS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-glass"
+          >
+            Get Directions
+          </a>
+        </div>
+
+        <div style={{ aspectRatio: "4 / 3", border: "1px solid rgba(10,10,10,0.08)" }}>
+          <iframe
+            src={MAPS_EMBED_URL}
+            title="Dimension Barbershop location"
+            width="100%"
+            height="100%"
+            style={{ border: 0, display: "block" }}
+            loading="lazy"
+          />
         </div>
       </section>
     </>
