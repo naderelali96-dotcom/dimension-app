@@ -1,6 +1,9 @@
-import { SERVICES } from "@/lib/site-config";
+"use client";
+
+import { useLanguage } from "@/lib/LanguageContext";
 
 export default function ServicesPage() {
+  const { t } = useLanguage();
   return (
     <>
       {/* ── PAGE HEADER ─────────────────────────────────── */}
@@ -32,7 +35,7 @@ export default function ServicesPage() {
                 color: "rgba(10,10,10,0.4)",
               }}
             >
-              What We Do
+              {t.services.eyebrow}
             </span>
           </div>
 
@@ -54,7 +57,7 @@ export default function ServicesPage() {
                 textTransform: "uppercase",
               }}
             >
-              Services
+              {t.services.title}
             </h1>
             <p
               style={{
@@ -66,9 +69,9 @@ export default function ServicesPage() {
                 textAlign: "right",
               }}
             >
-              Every service is deliberate.
+              {t.services.subtitle1}
               <br />
-              Every detail accounted for.
+              {t.services.subtitle2}
             </p>
           </div>
         </div>
@@ -89,7 +92,7 @@ export default function ServicesPage() {
             background: "rgba(10,10,10,0.06)",
           }}
         >
-          {SERVICES.map((s) => (
+          {t.servicesList.map((s) => (
             <div
               key={s.name}
               className="service-card"

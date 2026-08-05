@@ -1,6 +1,10 @@
+"use client";
+
 import Link from "next/link";
+import { useLanguage } from "@/lib/LanguageContext";
 
 export default function Footer() {
+  const { t } = useLanguage();
   return (
     <footer
       style={{
@@ -22,13 +26,13 @@ export default function Footer() {
       />
 
       <div style={{ display: "flex", gap: "32px" }}>
-        <Link href="/" className="nav-link">Home</Link>
-        <Link href="/services" className="nav-link">Services</Link>
-        <Link href="/about" className="nav-link">Team</Link>
+        <Link href="/" className="nav-link">{t.nav.home}</Link>
+        <Link href="/services" className="nav-link">{t.nav.services}</Link>
+        <Link href="/about" className="nav-link">{t.nav.team}</Link>
       </div>
 
       <p style={{ fontSize: "11px", color: "rgba(10,10,10,0.4)", letterSpacing: "0.06em" }}>
-        © {new Date().getFullYear()} Dimension Barbershop. All rights reserved.
+        © {new Date().getFullYear()} Dimension Barbershop. {t.footer.rights}
       </p>
     </footer>
   );

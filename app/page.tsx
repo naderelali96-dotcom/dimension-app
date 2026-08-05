@@ -1,7 +1,10 @@
+"use client";
+
 import Link from "next/link";
-import { SERVICES } from "@/lib/site-config";
+import { useLanguage } from "@/lib/LanguageContext";
 
 export default function Home() {
+  const { t } = useLanguage();
   return (
     <>
       {/* ── HERO ─────────────────────────────────────────── */}
@@ -82,9 +85,9 @@ export default function Home() {
               textTransform: "uppercase",
             }}
           >
-            Where Precision
+            {t.home.headline1}
             <br />
-            Meets Privacy
+            {t.home.headline2}
           </h1>
 
           {/* Sub */}
@@ -100,9 +103,9 @@ export default function Home() {
               letterSpacing: "0.01em",
             }}
           >
-            Every cut, a statement. Every visit, an experience.
+            {t.home.sub1}
             <br />
-            Where craft meets culture.
+            {t.home.sub2}
           </p>
         </div>
       </section>
@@ -131,9 +134,9 @@ export default function Home() {
               marginBottom: "28px",
             }}
           >
-            The Art of
+            {t.home.introHeading1}
             <br />
-            the Cut
+            {t.home.introHeading2}
           </h2>
           <p
             style={{
@@ -144,12 +147,10 @@ export default function Home() {
               marginBottom: "40px",
             }}
           >
-            Dimension is built on one principle — excellence without compromise.
-            Every service is delivered with razor-sharp technique, genuine
-            attention, and a standard that never settles.
+            {t.home.introBody}
           </p>
           <Link href="/about" className="btn-glass">
-            Our Story
+            {t.home.ourStory}
           </Link>
         </div>
 
@@ -163,12 +164,7 @@ export default function Home() {
             border: "1px solid rgba(10,10,10,0.08)",
           }}
         >
-          {[
-            { num: "5+", label: "Years in business" },
-            { num: "10K+", label: "Clients served" },
-            { num: "3", label: "Master barbers" },
-            { num: "100%", label: "Satisfaction" },
-          ].map(({ num, label }) => (
+          {t.home.stats.map(({ num, label }) => (
             <div
               key={label}
               style={{
@@ -229,7 +225,7 @@ export default function Home() {
               color: "rgba(10,10,10,0.45)",
             }}
           >
-            What We Do
+            {t.home.whatWeDo}
           </span>
         </div>
 
@@ -241,7 +237,7 @@ export default function Home() {
             border: "1px solid rgba(10,10,10,0.08)",
           }}
         >
-          {SERVICES.map((s) => (
+          {t.servicesList.map((s) => (
             <div
               key={s.name}
               className="service-card"

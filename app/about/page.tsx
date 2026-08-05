@@ -1,24 +1,11 @@
-import { ADDRESS, MAPS_EMBED_URL, MAPS_DIRECTIONS_URL } from "@/lib/site-config";
+"use client";
 
-const barbers = [
-  {
-    photo: "/team/nader.jpg",
-    name: "Nader",
-    bio: "Nader loves a good conversation just as much as a clean line. He pays close attention to every detail, from the first consultation to the final trim, so you leave looking exactly how you pictured it.",
-  },
-  {
-    photo: "/team/tony.jpg",
-    name: "Tony",
-    bio: "Tony keeps things light and easygoing while staying precise with every cut. He listens closely during consultations and always delivers exactly what you asked for.",
-  },
-  {
-    photo: "/team/ralph.jpg",
-    name: "Ralph",
-    bio: "Ralph has a sharp eye for detail and an easy way with conversation. He takes his time with every cut and makes sure nothing gets overlooked.",
-  },
-];
+import { ADDRESS, MAPS_EMBED_URL, MAPS_DIRECTIONS_URL } from "@/lib/site-config";
+import { useLanguage } from "@/lib/LanguageContext";
 
 export default function AboutPage() {
+  const { t } = useLanguage();
+  const barbers = t.about.barbers;
   return (
     <>
       {/* ── PAGE HEADER ─────────────────────────────────── */}
@@ -50,7 +37,7 @@ export default function AboutPage() {
                 color: "rgba(10,10,10,0.4)",
               }}
             >
-              Who We Are
+              {t.about.eyebrow}
             </span>
           </div>
 
@@ -63,7 +50,7 @@ export default function AboutPage() {
               textTransform: "uppercase",
             }}
           >
-            About
+            {t.about.title}
           </h1>
         </div>
       </section>
@@ -91,11 +78,11 @@ export default function AboutPage() {
               marginBottom: "0",
             }}
           >
-            Built on
+            {t.about.storyHeading1}
             <br />
-            <span style={{ color: "rgba(10,10,10,0.2)" }}>a single</span>
+            <span style={{ color: "rgba(10,10,10,0.2)" }}>{t.about.storyHeading2}</span>
             <br />
-            belief.
+            {t.about.storyHeading3}
           </h2>
         </div>
 
@@ -110,10 +97,7 @@ export default function AboutPage() {
               marginBottom: "28px",
             }}
           >
-            Dimension was founded in 2020 with one conviction: that the
-            barbershop could be something more. Not just a place to get a
-            haircut — a place where attention to detail is non-negotiable, where
-            every client leaves feeling like the best version of themselves.
+            {t.about.storyP1}
           </p>
           <p
             style={{
@@ -124,9 +108,7 @@ export default function AboutPage() {
               marginBottom: "28px",
             }}
           >
-            We built this shop the hard way — refusing to rush, refusing to
-            compromise, and refusing to treat any head of hair as ordinary. That
-            standard has never changed.
+            {t.about.storyP2}
           </p>
           <p
             style={{
@@ -136,9 +118,7 @@ export default function AboutPage() {
               color: "rgba(10,10,10,0.55)",
             }}
           >
-            Dimension is more than a name. It&apos;s a reminder that craft
-            lives in the details — in the depth of a fade, the angle of a line,
-            the confidence a clean cut gives a person walking out the door.
+            {t.about.storyP3}
           </p>
         </div>
       </section>
@@ -160,20 +140,7 @@ export default function AboutPage() {
             background: "rgba(10,10,10,0.06)",
           }}
         >
-          {[
-            {
-              title: "Precision",
-              body: "Every line is intentional. Every fade is seamless. We take the time to get it right — every single time.",
-            },
-            {
-              title: "Respect",
-              body: "Your time, your look, your culture. We honor all of it. The chair is yours.",
-            },
-            {
-              title: "Craft",
-              body: "Barbering is a discipline. We treat it as one — studying technique, investing in tools, and never stopping the pursuit.",
-            },
-          ].map(({ title, body }) => (
+          {t.about.values.map(({ title, body }) => (
             <div key={title} style={{ padding: "56px 40px", background: "#F0EEE9" }}>
               <span className="line-accent" style={{ marginBottom: "24px" }} />
               <h3
@@ -229,7 +196,7 @@ export default function AboutPage() {
               color: "rgba(10,10,10,0.4)",
             }}
           >
-            The Team
+            {t.about.teamEyebrow}
           </span>
         </div>
 
@@ -323,7 +290,7 @@ export default function AboutPage() {
                 color: "rgba(10,10,10,0.4)",
               }}
             >
-              Visit Us
+              {t.about.visitEyebrow}
             </span>
           </div>
           <h2
@@ -336,7 +303,7 @@ export default function AboutPage() {
               marginBottom: "24px",
             }}
           >
-            Come See Us.
+            {t.about.visitHeading}
           </h2>
           <p
             style={{
@@ -355,7 +322,7 @@ export default function AboutPage() {
             rel="noopener noreferrer"
             className="btn-glass"
           >
-            Get Directions
+            {t.about.getDirections}
           </a>
         </div>
 

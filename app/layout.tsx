@@ -5,6 +5,7 @@ import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import { SQUIRE_BRAND_ID } from "@/lib/site-config";
+import { LanguageProvider } from "@/lib/LanguageContext";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -26,9 +27,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${dmSans.variable}`}>
       <body style={{ fontFamily: "var(--font-dm-sans), DM Sans, sans-serif" }} className="min-h-screen flex flex-col">
-        <Nav />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <LanguageProvider>
+          <Nav />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </LanguageProvider>
         <Script
           id="squire-widget-loader"
           strategy="afterInteractive"

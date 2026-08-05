@@ -4,10 +4,12 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import BookingButton from "@/components/BookingButton";
+import { useLanguage } from "@/lib/LanguageContext";
 
 export default function Nav() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
+  const { lang, toggleLang, t } = useLanguage();
 
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : "";
@@ -17,9 +19,9 @@ export default function Nav() {
   }, [menuOpen]);
 
   const links = [
-    { href: "/", label: "Home" },
-    { href: "/services", label: "Services" },
-    { href: "/about", label: "Team" },
+    { href: "/", label: t.nav.home },
+    { href: "/services", label: t.nav.services },
+    { href: "/about", label: t.nav.team },
   ];
 
   return (
@@ -78,9 +80,12 @@ export default function Nav() {
         />
       </Link>
 
-      {/* Book CTA */}
-      <div style={{ justifySelf: "end" }}>
-        <BookingButton className="btn-glass-accent">Book Now</BookingButton>
+      {/* Book CTA + language toggle */}
+      <div style={{ justifySelf: "end", display: "flex", alignItems: "center", gap: "20px" }}>
+        <button type="button" className="lang-toggle lang-toggle-header" onClick={toggleLang}>
+          {lang === "en" ? "FR" : "EN"}
+        </button>
+        <BookingButton className="btn-glass-accent">{t.nav.bookNow}</BookingButton>
       </div>
     </header>
 
@@ -96,6 +101,9 @@ export default function Nav() {
           {label}
         </Link>
       ))}
+      <button type="button" className="lang-toggle" onClick={toggleLang}>
+        {lang === "en" ? "Français" : "English"}
+      </button>
     </div>
     </>
   );
